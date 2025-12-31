@@ -93,12 +93,13 @@ export const MESSAGES: Record<Lang, any> = {
         learnKids: {
           name: 'Learn Kids',
           subtitle: 'Educational Learning Platform',
-          stack: 'Flutter · Dart · Text-to-Speech Integration',
+          stack: 'Flutter · Dart · Educational Frontend',
           summary:
             'Educational platform focused on delivering interactive learning content for children using a clean and scalable frontend architecture.',
           bullets: [
             'Designed modular and reusable Flutter widgets.',
             'Implemented structured data flows for educational content.',
+            'Integrated text-to-speech features to improve accessibility.',
             'Focused on usability, clarity, and maintainable UI patterns.',
             'Demonstrates frontend architecture suitable for real-world applications.'
           ],
@@ -233,12 +234,13 @@ export const MESSAGES: Record<Lang, any> = {
         learnKids: {
           name: 'Learn Kids',
           subtitle: 'Plataforma Educativa Infantil',
-          stack: 'Flutter · Dart · Integración Texto a voz',
+          stack: 'Flutter · Dart · Interfaz educativa',
           summary:
             'Plataforma educativa enfocada en ofrecer contenido interactivo para niños utilizando una arquitectura frontend clara y escalable.',
           bullets: [
             'Diseño de widgets modulares y reutilizables.',
             'Implementación de flujos de datos estructurados para contenido educativo.',
+            'Funciones de texto a voz integradas para mejorar la accesibilidad.',
             'Enfoque en usabilidad, claridad y mantenibilidad del UI.',
             'Ejemplo de arquitectura frontend aplicable a proyectos reales.'
           ],
