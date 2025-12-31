@@ -1,1 +1,45 @@
-<p>contact works!</p>
+<section class="py-10 border-t border-neutral-800">
+  <h2 class="text-2xl font-semibold">{{ i18n.t('contact.title') }}</h2>
+  <p class="mt-2 text-neutral-300">{{ i18n.t('contact.subtitle') }}</p>
+
+  <div class="mt-6 grid md:grid-cols-3 gap-4">
+    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
+      <mat-card-content class="p-6">
+        <div class="text-sm text-neutral-400">{{ i18n.t('contact.email') }}</div>
+        <a class="mt-2 block text-neutral-100 underline underline-offset-4" href="mailto:afriasdev@gmail.com">
+          afriasdev@gmail.com
+        </a>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
+      <mat-card-content class="p-6">
+        <div class="text-sm text-neutral-400">{{ i18n.t('contact.linkedin') }}</div>
+        <a class="mt-2 block text-neutral-100 underline underline-offset-4"
+           href="https://www.linkedin.com/in/andres-frias-guzman/" target="_blank" rel="noreferrer">
+          /in/andres-frias-guzman
+        </a>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
+      <mat-card-content class="p-6">
+        <div class="text-sm text-neutral-400">{{ i18n.t('contact.github') }}</div>
+        <a class="mt-2 block text-neutral-100 underline underline-offset-4"
+           href="https://github.com/SentenciaSQL" target="_blank" rel="noreferrer">
+          github.com/SentenciaSQL
+        </a>
+
+        <div class="mt-4 text-sm text-neutral-400">{{ i18n.t('contact.timezone') }}</div>
+        <div class="mt-1 text-neutral-200 text-sm">GMT-4 (America/Santo_Domingo)</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="mt-6">
+    <a mat-stroked-button class="!border-neutral-700 !text-neutral-100" href="/Andres_Frias_CV.pdf" target="_blank" rel="noreferrer">
+      <mat-icon class="mr-2">download</mat-icon>
+      {{ i18n.t('nav.downloadCv') }}
+    </a>
+  </div>
+</section>

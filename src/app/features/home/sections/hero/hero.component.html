@@ -1,1 +1,52 @@
-<p>hero works!</p>
+<section class="py-14 sm:py-20">
+  <div class="grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-8">
+      <h1 class="text-3xl sm:text-5xl font-semibold leading-tight">
+        {{ i18n.t('hero.title') }}
+      </h1>
+      <p class="mt-3 text-neutral-300 text-lg">
+        {{ i18n.t('hero.subtitle') }}
+      </p>
+      <p class="mt-6 text-neutral-300 leading-relaxed">
+        {{ i18n.t('hero.blurb') }}
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <!-- Cambia href a tu CV en assets o link público -->
+        <a mat-raised-button class="!bg-neutral-100 !text-neutral-900" href="/Andres_Frias_CV.pdf" target="_blank" rel="noreferrer">
+          <mat-icon class="mr-2">download</mat-icon>
+          {{ i18n.t('hero.ctaPrimary') }}
+        </a>
+
+        <a mat-stroked-button class="!border-neutral-700 !text-neutral-100" href="https://github.com/SentenciaSQL" target="_blank" rel="noreferrer">
+          <mat-icon class="mr-2">code</mat-icon>
+          {{ i18n.t('hero.ctaSecondary') }}
+        </a>
+
+        <a mat-button class="!text-neutral-200" href="https://www.linkedin.com/in/andres-frias-guzman/" target="_blank" rel="noreferrer">
+          <mat-icon class="mr-2">open_in_new</mat-icon>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-2 text-sm text-neutral-400">
+        <span class="px-3 py-1 rounded-full border border-neutral-800">Java · Spring Boot · APIs</span>
+        <span class="px-3 py-1 rounded-full border border-neutral-800">Angular · TypeScript</span>
+        <span class="px-3 py-1 rounded-full border border-neutral-800">PostgreSQL · Oracle · PL/SQL</span>
+        <span class="px-3 py-1 rounded-full border border-neutral-800">AWS · Docker · CI/CD</span>
+      </div>
+    </div>
+
+    <div class="lg:col-span-4">
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6">
+        <div class="text-sm text-neutral-400">Recruiter-friendly</div>
+        <ul class="mt-3 space-y-2 text-neutral-200">
+          <li>• 13+ years (enterprise)</li>
+          <li>• US-based contractor experience</li>
+          <li>• Backend-heavy, performance-focused</li>
+          <li>• Remote: LATAM ↔ US overlap (GMT-4)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

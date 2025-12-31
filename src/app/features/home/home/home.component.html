@@ -1,1 +1,32 @@
-<p>home works!</p>
+<div class="min-h-screen bg-neutral-950 text-neutral-100">
+  <mat-toolbar class="!bg-neutral-950 !text-neutral-100 border-b border-neutral-800">
+    <span class="font-semibold tracking-tight">Andrés Frías</span>
+    <span class="flex-1"></span>
+
+    <button mat-button class="!text-neutral-200" (click)="scrollTo('contact')">
+      {{ i18n.t('nav.contact') }}
+    </button>
+
+    <button mat-stroked-button class="!border-neutral-700 !text-neutral-100 ml-2" (click)="i18n.toggle()">
+      <mat-icon class="mr-1">language</mat-icon>
+      {{ i18n.lang() === 'en' ? 'ES' : 'EN' }}
+    </button>
+  </mat-toolbar>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <app-hero />
+    <app-about />
+    <app-stack />
+    <app-secondary-tech/>
+    <app-architecture/>
+    <app-projects />
+    <app-experience />
+    <app-contact id="contact" />
+  </main>
+
+  <footer class="border-t border-neutral-800 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-neutral-400">
+      © {{ year }} Andrés Frías · Santo Domingo, DR · GMT-4
+    </div>
+  </footer>
+</div>
