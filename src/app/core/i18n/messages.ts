@@ -107,6 +107,23 @@ export const MESSAGES: Record<Lang, any> = {
             repo: 'Repository'
           }
         },
+
+        tesloShop: {
+          name: 'UrbanWear',
+          subtitle: 'Clothing E-commerce Platform',
+          stack: 'React · NestJS · PostgreSQL · JWT · Docker',
+          summary:
+            'E-commerce platform for clothing with a backend architecture in NestJS and frontend in React, including JWT authentication and Docker deployment.',
+          bullets: [
+            'Designed and implemented secure REST APIs using NestJS and JWT authentication.',
+            'Built a modular React frontend integrated with backend services.',
+            'Focused on maintainability, scalability, and real-world e-commerce workflows.'
+          ],
+          links: {
+            api: 'API Repository',
+            ui: 'Frontend Repository'
+          }
+        }
       }
     },
     experience: { title: 'Experience Snapshot' },
@@ -248,6 +265,22 @@ export const MESSAGES: Record<Lang, any> = {
             repo: 'Repositorio'
           }
         },
+        tesloShop: {
+          name: 'UrbanWear',
+          subtitle: 'E-commerce de prendas para vestir',
+          stack: 'React · NestJS · PostgreSQL · JWT · Docker',
+          summary:
+            'E-commerce de prendas de vestir con arquitectura backend en NestJS y frontend en React, incluyendo autenticación JWT y despliegue en Docker.',
+          bullets: [
+            'Diseño e implementación de APIs REST seguras con NestJS y autenticación JWT.',
+            'Frontend React modular integrado con servicios backend.',
+            'Enfoque en mantenibilidad, escalabilidad y flujos de e-commerce reales.'
+          ],
+          links: {
+            api: 'Repositorio API',
+            ui: 'Repositorio Frontend'
+          }
+        }
 
       }
     },
