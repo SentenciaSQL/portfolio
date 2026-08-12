@@ -85,8 +85,11 @@
   </main>
 
   <footer class="border-t border-neutral-800 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-neutral-400">
-      © {{ year }} Andrés Frías · Santo Domingo, DR · GMT-4
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-neutral-400 flex items-center justify-between gap-4">
+      <span>© {{ year }} Andrés Frías · Santo Domingo, DR · GMT-4</span>
+      <a routerLink="/privacy" class="text-neutral-400 hover:text-neutral-200 underline underline-offset-4">
+        {{ i18n.t('footer.privacy') }}
+      </a>
     </div>
   </footer>
 </div>

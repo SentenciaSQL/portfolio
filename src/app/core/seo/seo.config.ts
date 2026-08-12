@@ -28,9 +28,18 @@ export const PROJECTS_SEO: PageSeo = {
   keywords: `${DEFAULT_KEYWORDS}, Projects, Portfolio Projects`,
 };
 
+export const PRIVACY_SEO: PageSeo = {
+  path: '/privacy',
+  title: 'Privacy Policy | Andrés Frías',
+  description:
+    'Privacy policy for andresfrias.dev: how language preferences, analytics, and contact interactions are handled on this personal portfolio site.',
+  keywords: `${DEFAULT_KEYWORDS}, Privacy Policy`,
+};
+
 export const ROUTE_SEO: Record<string, PageSeo> = {
   '': HOME_SEO,
   projects: PROJECTS_SEO,
+  privacy: PRIVACY_SEO,
 };
 
 export const PERSON_JSON_LD = {
