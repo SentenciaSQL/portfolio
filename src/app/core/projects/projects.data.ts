@@ -61,10 +61,10 @@ export const PROJECTS: ProjectMeta[] = [
     ],
   },
   {
-    id: 'composeIntro',
-    stacks: ['Kotlin', 'Android'],
+    id: 'stockWise',
+    stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/Introduccion-Jeckpack-Compose'},
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/StockWise-App'},
     ],
   },
   {
