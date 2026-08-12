@@ -142,16 +142,17 @@ export const MESSAGES: Record<Lang, any> = {
           }
         },
 
-        composeIntro: {
-          name: 'Jetpack Compose Intro',
-          subtitle: 'Modern Android UI Practice',
-          stack: 'Kotlin · Android · Jetpack Compose',
+        stockWise: {
+          name: 'StockWise',
+          subtitle: 'Inventory Management System',
+          stack: 'Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT',
           summary:
-            'Hands-on Android project exploring declarative UI with Jetpack Compose and Kotlin.',
+            'Full-stack inventory platform with a Spring Boot API, Angular web app, and Flutter mobile client sharing one PostgreSQL database.',
           bullets: [
-            'Built UI screens using Jetpack Compose.',
-            'Practiced modern Android development patterns with Kotlin.',
-            'Focused on component composition and responsive layouts.'
+            'JWT authentication with role-based access and catalog CRUD for products, suppliers, and warehouses.',
+            'Stock movements, transfers, low-stock detection, and dashboard analytics.',
+            'Angular SaaS UI and Flutter mobile client consuming the same Spring Boot API.',
+            'Flyway migrations, OpenAPI/Swagger, and Docker Compose for local full-stack runs.'
           ],
           links: {
             repo: 'Repository'
@@ -406,16 +407,17 @@ export const MESSAGES: Record<Lang, any> = {
           }
         },
 
-        composeIntro: {
-          name: 'Introducción a Jetpack Compose',
-          subtitle: 'Práctica de UI Moderna en Android',
-          stack: 'Kotlin · Android · Jetpack Compose',
+        stockWise: {
+          name: 'StockWise',
+          subtitle: 'Sistema de Gestión de Inventario',
+          stack: 'Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT',
           summary:
-            'Proyecto Android práctico para explorar UI declarativa con Jetpack Compose y Kotlin.',
+            'Plataforma full-stack de inventario con API Spring Boot, web Angular y cliente móvil Flutter compartiendo una base PostgreSQL.',
           bullets: [
-            'Pantallas construidas con Jetpack Compose.',
-            'Patrones modernos de desarrollo Android con Kotlin.',
-            'Enfoque en composición de componentes y layouts responsivos.'
+            'Autenticación JWT con roles y CRUD de catálogo para productos, proveedores y almacenes.',
+            'Movimientos de stock, transferencias, detección de stock bajo y analítica de dashboard.',
+            'UI SaaS en Angular y cliente móvil Flutter consumiendo la misma API Spring Boot.',
+            'Migraciones Flyway, OpenAPI/Swagger y Docker Compose para ejecución full-stack local.'
           ],
           links: {
             repo: 'Repositorio'
