@@ -1,0 +1,92 @@
+<div class="min-h-screen bg-neutral-950 text-neutral-100">
+  <mat-toolbar class="!bg-neutral-950 !text-neutral-100 border-b border-neutral-800">
+    <a routerLink="/" class="font-semibold tracking-tight !text-neutral-100 no-underline">
+      Andrés Frías
+    </a>
+    <span class="flex-1"></span>
+
+    <a mat-button class="!text-neutral-200" routerLink="/">
+      <mat-icon class="mr-1">home</mat-icon>
+      {{ i18n.t('allProjects.backHome') }}
+    </a>
+
+    <button mat-stroked-button class="!border-neutral-700 !text-neutral-100 ml-2" (click)="i18n.toggle()">
+      <mat-icon class="mr-1">language</mat-icon>
+      {{ i18n.lang() === 'en' ? 'ES' : 'EN' }}
+    </button>
+  </mat-toolbar>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-semibold">{{ i18n.t('allProjects.title') }}</h1>
+        <p class="mt-2 text-neutral-400">{{ i18n.t('allProjects.subtitle') }}</p>
+      </div>
+
+      <div class="text-sm text-neutral-400">
+        {{ filteredProjects().length }} {{ i18n.t('allProjects.results') }}
+      </div>
+    </div>
+
+    <section class="mt-8">
+      <div class="flex items-center justify-between gap-3 mb-3">
+        <h2 class="text-sm uppercase tracking-wide text-neutral-400">
+          {{ i18n.t('allProjects.filterByStack') }}
+        </h2>
+        @if (selectedStacks().length > 0) {
+          <button mat-button class="!text-neutral-300" (click)="clearFilters()">
+            {{ i18n.t('allProjects.clearFilters') }}
+          </button>
+        }
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        <button
+          type="button"
+          class="px-3 py-1.5 rounded-full border text-sm transition-colors"
+          [class.border-neutral-100]="selectedStacks().length === 0"
+          [class.bg-neutral-100]="selectedStacks().length === 0"
+          [class.text-neutral-900]="selectedStacks().length === 0"
+          [class.border-neutral-800]="selectedStacks().length > 0"
+          [class.text-neutral-300]="selectedStacks().length > 0"
+          (click)="clearFilters()">
+          {{ i18n.t('allProjects.allStacks') }}
+        </button>
+
+        @for (stack of stacks; track stack) {
+          <button
+            type="button"
+            class="px-3 py-1.5 rounded-full border text-sm transition-colors"
+            [class.border-neutral-100]="isSelected(stack)"
+            [class.bg-neutral-100]="isSelected(stack)"
+            [class.text-neutral-900]="isSelected(stack)"
+            [class.border-neutral-800]="!isSelected(stack)"
+            [class.text-neutral-300]="!isSelected(stack)"
+            (click)="toggleStack(stack)">
+            {{ stack }}
+          </button>
+        }
+      </div>
+    </section>
+
+    <section class="mt-8">
+      @if (filteredProjects().length === 0) {
+        <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-8 text-neutral-400">
+          {{ i18n.t('allProjects.empty') }}
+        </div>
+      } @else {
+        <div class="grid lg:grid-cols-2 gap-4">
+          @for (project of filteredProjects(); track project.id) {
+            <app-project-card [project]="project" />
+          }
+        </div>
+      }
+    </section>
+  </main>
+
+  <footer class="border-t border-neutral-800 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-neutral-400">
+      © {{ year }} Andrés Frías · Santo Domingo, DR · GMT-4
+    </div>
+  </footer>
+</div>
