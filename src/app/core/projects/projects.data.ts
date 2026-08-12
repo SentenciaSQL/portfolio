@@ -29,6 +29,7 @@ export const PROJECTS: ProjectMeta[] = [
   },
   {
     id: 'stockWise',
+    featured: true,
     stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
       {kind: 'repo', url: 'https://github.com/SentenciaSQL/StockWise-App'},
@@ -68,7 +69,6 @@ export const PROJECTS: ProjectMeta[] = [
   },
   {
     id: 'learnKids',
-    featured: true,
     stacks: ['Flutter', 'Dart'],
     links: [
       {kind: 'repo', url: 'https://github.com/SentenciaSQL/learn_kids_app'},
