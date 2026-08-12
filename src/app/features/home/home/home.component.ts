@@ -1,4 +1,5 @@
 import {Component, inject} from '@angular/core';
+import {RouterLink} from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,7 +16,7 @@ import {ArchitectureComponent} from '../sections/architecture/architecture.compo
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, HeroComponent, AboutComponent, StackComponent, ProjectsComponent, ExperienceComponent, ContactComponent, SecondaryTechComponent, ArchitectureComponent],
+  imports: [RouterLink, MatToolbarModule, MatButtonModule, MatIconModule, HeroComponent, AboutComponent, StackComponent, ProjectsComponent, ExperienceComponent, ContactComponent, SecondaryTechComponent, ArchitectureComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

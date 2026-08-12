@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import {HomeComponent} from './features/home/home/home.component';
 import {AllProjectsComponent} from './features/all-projects/all-projects.component';
-import {HOME_SEO, PROJECTS_SEO} from './core/seo/seo.config';
+import {PrivacyComponent} from './features/privacy/privacy.component';
+import {HOME_SEO, PRIVACY_SEO, PROJECTS_SEO} from './core/seo/seo.config';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,12 @@ export const routes: Routes = [
     component: AllProjectsComponent,
     title: PROJECTS_SEO.title,
     data: {seo: PROJECTS_SEO},
+  },
+  {
+    path: 'privacy',
+    component: PrivacyComponent,
+    title: PRIVACY_SEO.title,
+    data: {seo: PRIVACY_SEO},
   },
   { path: '**', redirectTo: '' },
 ];
