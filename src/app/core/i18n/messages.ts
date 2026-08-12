@@ -19,6 +19,7 @@ export const MESSAGES: Record<Lang, any> = {
     stack: { title: 'Tech Stack' },
     projects: {
       title: 'Selected Projects',
+      viewAll: 'View all projects',
       items: {
         cmms: {
           name: 'CMMS Platform',
@@ -123,8 +124,114 @@ export const MESSAGES: Record<Lang, any> = {
             api: 'API Repository',
             ui: 'Frontend Repository'
           }
+        },
+
+        pokedexKotlin: {
+          name: 'Pokedex Kotlin',
+          subtitle: 'Android Mobile App',
+          stack: 'Kotlin · Android',
+          summary:
+            'Android application built with Kotlin to browse Pokémon data through a clean mobile architecture.',
+          bullets: [
+            'Native Android UI implemented with Kotlin.',
+            'Structured data consumption and list/detail navigation flows.',
+            'Focused on mobile architecture fundamentals and maintainable code.'
+          ],
+          links: {
+            repo: 'Repository'
+          }
+        },
+
+        composeIntro: {
+          name: 'Jetpack Compose Intro',
+          subtitle: 'Modern Android UI Practice',
+          stack: 'Kotlin · Android · Jetpack Compose',
+          summary:
+            'Hands-on Android project exploring declarative UI with Jetpack Compose and Kotlin.',
+          bullets: [
+            'Built UI screens using Jetpack Compose.',
+            'Practiced modern Android development patterns with Kotlin.',
+            'Focused on component composition and responsive layouts.'
+          ],
+          links: {
+            repo: 'Repository'
+          }
+        },
+
+        netCore: {
+          name: '.NET Core Samples',
+          subtitle: 'Backend Services & APIs',
+          stack: 'C# · .NET',
+          summary:
+            'Collection of backend-oriented samples using C# and .NET for APIs and service logic.',
+          bullets: [
+            'Implemented backend services and API endpoints with .NET.',
+            'Applied C# patterns for business logic and integrations.',
+            'Useful reference for enterprise-style .NET development.'
+          ],
+          links: {
+            repo: 'Repository'
+          }
+        },
+
+        taskFlow: {
+          name: 'TaskFlow',
+          subtitle: 'Task Management Backend',
+          stack: 'C# · .NET',
+          summary:
+            'Task management oriented project built with C# and .NET to model workflows and service layers.',
+          bullets: [
+            'Modeled task-oriented domain logic in C#.',
+            'Organized backend structure around maintainable service layers.',
+            'Demonstrates practical .NET application design.'
+          ],
+          links: {
+            repo: 'Repository'
+          }
+        },
+
+        adminDashboardFlutter: {
+          name: 'Flutter Admin Dashboard',
+          subtitle: 'Dashboard UI Kit',
+          stack: 'Flutter · Dart',
+          summary:
+            'Admin dashboard interface built with Flutter and Dart, focused on reusable UI composition.',
+          bullets: [
+            'Designed dashboard layouts with Flutter widgets.',
+            'Built reusable UI blocks for admin-style screens.',
+            'Emphasized clean Dart structure and UI consistency.'
+          ],
+          links: {
+            repo: 'Repository'
+          }
+        },
+
+        springChat: {
+          name: 'Spring Boot Chat Backend',
+          subtitle: 'Real-time Messaging API',
+          stack: 'Java · Spring Boot',
+          summary:
+            'Backend chat service built with Java and Spring Boot to support messaging-oriented APIs.',
+          bullets: [
+            'Implemented chat-oriented backend endpoints with Spring Boot.',
+            'Focused on Java service structure and API design.',
+            'Useful showcase of backend messaging foundations.'
+          ],
+          links: {
+            repo: 'Repository'
+          }
         }
       }
+    },
+    allProjects: {
+      title: 'All Projects',
+      subtitle: 'Browse the full catalog and filter by technology stack.',
+      filterByStack: 'Filter by stack',
+      allStacks: 'All',
+      clearFilters: 'Clear filters',
+      results: 'projects',
+      empty: 'No projects match the selected stack filters.',
+      backHome: 'Home',
     },
     experience: { title: 'Experience Snapshot' },
     contact: {
@@ -179,6 +286,7 @@ export const MESSAGES: Record<Lang, any> = {
     stack: { title: 'Tecnologías' },
     projects: {
       title: 'Proyectos Destacados',
+      viewAll: 'Ver todos los proyectos',
       items: {
         cmms: {
           name: 'Plataforma CMMS',
@@ -280,9 +388,115 @@ export const MESSAGES: Record<Lang, any> = {
             api: 'Repositorio API',
             ui: 'Repositorio Frontend'
           }
+        },
+
+        pokedexKotlin: {
+          name: 'Pokedex Kotlin',
+          subtitle: 'Aplicación Móvil Android',
+          stack: 'Kotlin · Android',
+          summary:
+            'Aplicación Android en Kotlin para consultar información de Pokémon con una arquitectura móvil clara.',
+          bullets: [
+            'UI nativa Android implementada con Kotlin.',
+            'Flujos de listado y detalle con consumo de datos estructurado.',
+            'Enfoque en fundamentos de arquitectura móvil y código mantenible.'
+          ],
+          links: {
+            repo: 'Repositorio'
+          }
+        },
+
+        composeIntro: {
+          name: 'Introducción a Jetpack Compose',
+          subtitle: 'Práctica de UI Moderna en Android',
+          stack: 'Kotlin · Android · Jetpack Compose',
+          summary:
+            'Proyecto Android práctico para explorar UI declarativa con Jetpack Compose y Kotlin.',
+          bullets: [
+            'Pantallas construidas con Jetpack Compose.',
+            'Patrones modernos de desarrollo Android con Kotlin.',
+            'Enfoque en composición de componentes y layouts responsivos.'
+          ],
+          links: {
+            repo: 'Repositorio'
+          }
+        },
+
+        netCore: {
+          name: 'Ejemplos .NET Core',
+          subtitle: 'Servicios Backend y APIs',
+          stack: 'C# · .NET',
+          summary:
+            'Colección de ejemplos backend con C# y .NET orientados a APIs y lógica de servicio.',
+          bullets: [
+            'Servicios backend y endpoints API con .NET.',
+            'Patrones C# para lógica de negocio e integraciones.',
+            'Referencia práctica de desarrollo .NET de estilo empresarial.'
+          ],
+          links: {
+            repo: 'Repositorio'
+          }
+        },
+
+        taskFlow: {
+          name: 'TaskFlow',
+          subtitle: 'Backend de Gestión de Tareas',
+          stack: 'C# · .NET',
+          summary:
+            'Proyecto orientado a gestión de tareas con C# y .NET para modelar flujos y capas de servicio.',
+          bullets: [
+            'Lógica de dominio orientada a tareas en C#.',
+            'Estructura backend organizada en capas mantenibles.',
+            'Ejemplo práctico de diseño de aplicaciones .NET.'
+          ],
+          links: {
+            repo: 'Repositorio'
+          }
+        },
+
+        adminDashboardFlutter: {
+          name: 'Dashboard Admin Flutter',
+          subtitle: 'Kit de UI para Dashboards',
+          stack: 'Flutter · Dart',
+          summary:
+            'Interfaz de dashboard administrativo construida con Flutter y Dart, enfocada en composición UI reutilizable.',
+          bullets: [
+            'Layouts de dashboard con widgets de Flutter.',
+            'Bloques UI reutilizables para pantallas administrativas.',
+            'Énfasis en estructura Dart limpia y consistencia visual.'
+          ],
+          links: {
+            repo: 'Repositorio'
+          }
+        },
+
+        springChat: {
+          name: 'Chat Backend Spring Boot',
+          subtitle: 'API de Mensajería',
+          stack: 'Java · Spring Boot',
+          summary:
+            'Servicio backend de chat construido con Java y Spring Boot para APIs orientadas a mensajería.',
+          bullets: [
+            'Endpoints backend de chat con Spring Boot.',
+            'Enfoque en estructura de servicios Java y diseño de APIs.',
+            'Ejemplo de fundamentos backend para mensajería.'
+          ],
+          links: {
+            repo: 'Repositorio'
+          }
         }
 
       }
+    },
+    allProjects: {
+      title: 'Todos los Proyectos',
+      subtitle: 'Explora el catálogo completo y filtra por stack tecnológico.',
+      filterByStack: 'Filtrar por stack',
+      allStacks: 'Todos',
+      clearFilters: 'Limpiar filtros',
+      results: 'proyectos',
+      empty: 'No hay proyectos que coincidan con los filtros de stack seleccionados.',
+      backHome: 'Inicio',
     },
     experience: { title: 'Resumen de Experiencia' },
     contact: {
