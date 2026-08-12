@@ -265,6 +265,49 @@ export const MESSAGES: Record<Lang, any> = {
         },
       },
     },
+    footer: {
+      privacy: 'Privacy Policy',
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      updated: 'Last updated: August 12, 2026',
+      intro:
+        'This privacy policy explains how andresfrias.dev (the “Site”), a personal portfolio operated by Andrés Frías, handles information when you visit or interact with it.',
+      backHome: 'Home',
+      contactPrefix: 'If you have questions about this policy, contact:',
+      sections: [
+        {
+          title: '1. Information I collect',
+          body:
+            'This Site does not require accounts and does not include contact forms that store submissions on a server.\n\nIf you email me or reach out through LinkedIn or GitHub, I receive the information you choose to share in that conversation.',
+        },
+        {
+          title: '2. Local preferences',
+          body:
+            'The Site stores your language preference (English or Spanish) in your browser’s localStorage so the interface can remember your choice on later visits. This preference stays on your device and is not sent to a backend database.',
+        },
+        {
+          title: '3. Analytics and cookies',
+          body:
+            'The Site may use Google Analytics (or similar tools) to understand aggregate traffic, such as pages viewed and approximate location. These tools may set cookies or use similar technologies.\n\nYou can control cookies through your browser settings. Blocking cookies may limit analytics measurement but should not prevent browsing the portfolio content.',
+        },
+        {
+          title: '4. Third-party links',
+          body:
+            'The Site links to external services such as GitHub, LinkedIn, and project repositories. Those services have their own privacy policies, and I am not responsible for their practices.',
+        },
+        {
+          title: '5. Data sharing',
+          body:
+            'I do not sell personal information. Analytics providers may process usage data on my behalf under their terms. Contact messages you send are used only to respond to your inquiry.',
+        },
+        {
+          title: '6. Changes',
+          body:
+            'I may update this privacy policy from time to time. The “Last updated” date at the top of this page reflects the latest revision.',
+        },
+      ],
+    },
   },
 
   es: {
@@ -528,6 +571,49 @@ export const MESSAGES: Record<Lang, any> = {
             'Utilizado para desarrollar APIs backend con FastAPI, así como para scripting, automatización y prototipado rápido.',
         },
       },
+    },
+    footer: {
+      privacy: 'Política de privacidad',
+    },
+    privacy: {
+      title: 'Política de privacidad',
+      updated: 'Última actualización: 12 de agosto de 2026',
+      intro:
+        'Esta política de privacidad explica cómo andresfrias.dev (el “Sitio”), un portafolio personal operado por Andrés Frías, trata la información cuando visitas o interactúas con él.',
+      backHome: 'Inicio',
+      contactPrefix: 'Si tienes preguntas sobre esta política, contacta:',
+      sections: [
+        {
+          title: '1. Información que recopilo',
+          body:
+            'Este Sitio no requiere cuentas y no incluye formularios de contacto que almacenen envíos en un servidor.\n\nSi me escribes por correo o me contactas por LinkedIn o GitHub, recibo la información que eliges compartir en esa conversación.',
+        },
+        {
+          title: '2. Preferencias locales',
+          body:
+            'El Sitio guarda tu preferencia de idioma (inglés o español) en el localStorage del navegador para recordar tu elección en visitas posteriores. Esta preferencia permanece en tu dispositivo y no se envía a una base de datos backend.',
+        },
+        {
+          title: '3. Analítica y cookies',
+          body:
+            'El Sitio puede usar Google Analytics (o herramientas similares) para entender el tráfico agregado, como páginas vistas y ubicación aproximada. Estas herramientas pueden establecer cookies o usar tecnologías similares.\n\nPuedes controlar las cookies desde la configuración de tu navegador. Bloquearlas puede limitar la medición analítica, pero no debería impedir navegar el contenido del portafolio.',
+        },
+        {
+          title: '4. Enlaces de terceros',
+          body:
+            'El Sitio enlaza a servicios externos como GitHub, LinkedIn y repositorios de proyectos. Esos servicios tienen sus propias políticas de privacidad y no soy responsable de sus prácticas.',
+        },
+        {
+          title: '5. Compartición de datos',
+          body:
+            'No vendo información personal. Los proveedores de analítica pueden procesar datos de uso en mi nombre según sus términos. Los mensajes de contacto que envíes se usan solo para responder a tu consulta.',
+        },
+        {
+          title: '6. Cambios',
+          body:
+            'Puedo actualizar esta política de privacidad ocasionalmente. La fecha de “Última actualización” al inicio de esta página refleja la revisión más reciente.',
+        },
+      ],
     },
   },
 };
