@@ -1,23 +1,19 @@
-import {Component, computed, inject} from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {I18nService} from '../../../../core/i18n/i18n.service';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { I18nService } from '../../../../core/i18n/i18n.service';
+import { PROJECTS } from '../../../../core/projects/projects.data';
+import { ProjectCardComponent } from '../../../../shared/project-card/project-card.component';
 
 @Component({
   standalone: true,
   selector: 'app-projects',
-  imports: [MatCardModule, MatButtonModule],
+  imports: [RouterLink, MatButtonModule, MatIconModule, ProjectCardComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
   i18n = inject(I18nService);
-
-  cmms = computed(() => this.i18n.dict().projects.items.cmms);
-  blood = computed(() => this.i18n.dict().projects.items.blood);
-  spa = computed(() => this.i18n.dict().projects.items.spa);
-  learnkids = computed(() => this.i18n.dict().projects.items.learnKids);
-  pagatodo = computed(() => this.i18n.dict().projects.items.pagatodo);
-  teslShop = computed(() => this.i18n.dict().projects.items.tesloShop);
-  pokemonEncyclopedia = computed(() => this.i18n.dict().projects.items.pokemonEncyclopedia);
+  featuredProjects = PROJECTS.filter((project) => project.featured);
 }
