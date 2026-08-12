@@ -68,10 +68,10 @@ export const PROJECTS: ProjectMeta[] = [
     ],
   },
   {
-    id: 'netCore',
-    stacks: ['C#', '.NET'],
+    id: 'pokeFlu',
+    stacks: ['Flutter', 'Dart', 'Android'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/NET-Core'},
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/PokeFlu'},
     ],
   },
   {
