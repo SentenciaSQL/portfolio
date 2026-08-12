@@ -108,18 +108,18 @@
         <div class="flex-1">
           <div class="flex items-start justify-between gap-4">
             <div>
-              <div class="font-semibold text-lg">{{ learnkids().name }}</div>
-              <div class="mt-1 text-sm text-neutral-400">{{ learnkids().subtitle }}</div>
-              <div class="mt-1 text-sm text-neutral-400">{{ learnkids().stack }}</div>
+              <div class="font-semibold text-lg">{{ teslShop().name }}</div>
+              <div class="mt-1 text-sm text-neutral-400">{{ teslShop().subtitle }}</div>
+              <div class="mt-1 text-sm text-neutral-400">{{ teslShop().stack }}</div>
 
               <p class="mt-3 text-neutral-400 text-sm">
-                {{ learnkids().summary }}
+                {{ teslShop().summary }}
               </p>
             </div>
           </div>
 
           <ul class="mt-4 text-neutral-300 text-sm leading-relaxed space-y-2">
-            @for (feature of learnkids().bullets; track feature.id) {
+            @for (feature of teslShop().bullets; track feature.id) {
               <li>• {{ feature }}</li>
             }
           </ul>
@@ -127,8 +127,12 @@
 
         <div class="flex items-start gap-4 mt-6">
           <a mat-stroked-button class="!border-neutral-700 !text-neutral-100"
-             href="https://github.com/SentenciaSQL/learn_kids_app" target="_blank" rel="noreferrer">
-            {{ learnkids().links.repo }}
+             href="https://github.com/SentenciaSQL/nest-urbanwear-shop-api" target="_blank" rel="noreferrer">
+            {{ teslShop().links.api }}
+          </a>
+          <a mat-stroked-button class="!border-neutral-700 !text-neutral-100"
+             href="https://github.com/SentenciaSQL/urbanwear-shop-fontend" target="_blank" rel="noreferrer">
+            {{ teslShop().links.ui }}
           </a>
         </div>
       </mat-card-content>
@@ -174,18 +178,18 @@
         <div class="flex-1">
           <div class="flex items-start justify-between gap-4">
             <div>
-              <div class="font-semibold text-lg">{{ teslShop().name }}</div>
-              <div class="mt-1 text-sm text-neutral-400">{{ teslShop().subtitle }}</div>
-              <div class="mt-1 text-sm text-neutral-400">{{ teslShop().stack }}</div>
+              <div class="font-semibold text-lg">{{ pokemonEncyclopedia().name }}</div>
+              <div class="mt-1 text-sm text-neutral-400">{{ pokemonEncyclopedia().subtitle }}</div>
+              <div class="mt-1 text-sm text-neutral-400">{{ pokemonEncyclopedia().stack }}</div>
 
               <p class="mt-3 text-neutral-400 text-sm">
-                {{ teslShop().summary }}
+                {{ pokemonEncyclopedia().summary }}
               </p>
             </div>
           </div>
 
           <ul class="mt-4 text-neutral-300 text-sm leading-relaxed space-y-2">
-            @for (feature of teslShop().bullets; track feature.id) {
+            @for (feature of pokemonEncyclopedia().bullets; track feature.id) {
               <li>• {{ feature }}</li>
             }
           </ul>
@@ -193,17 +197,43 @@
 
         <div class="flex items-start gap-4 mt-6">
           <a mat-stroked-button class="!border-neutral-700 !text-neutral-100"
-             href="https://github.com/SentenciaSQL/nest-urbanwear-shop-api" target="_blank" rel="noreferrer">
-            {{ teslShop().links.api }}
-          </a>
-          <a mat-stroked-button class="!border-neutral-700 !text-neutral-100"
-             href="https://github.com/SentenciaSQL/urbanwear-shop-fontend" target="_blank" rel="noreferrer">
-            {{ teslShop().links.ui }}
+             href="https://github.com/SentenciaSQL/Pokedex-Kotlin" target="_blank" rel="noreferrer">
+            {{ pokemonEncyclopedia().links.repo }}
           </a>
         </div>
       </mat-card-content>
     </mat-card>
 
+    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl !h-full">
+      <mat-card-content class="p-6 flex flex-col h-full" style="display: flex">
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <div class="font-semibold text-lg">{{ learnkids().name }}</div>
+              <div class="mt-1 text-sm text-neutral-400">{{ learnkids().subtitle }}</div>
+              <div class="mt-1 text-sm text-neutral-400">{{ learnkids().stack }}</div>
+
+              <p class="mt-3 text-neutral-400 text-sm">
+                {{ learnkids().summary }}
+              </p>
+            </div>
+          </div>
+
+          <ul class="mt-4 text-neutral-300 text-sm leading-relaxed space-y-2">
+            @for (feature of learnkids().bullets; track feature.id) {
+              <li>• {{ feature }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="flex items-start gap-4 mt-6">
+          <a mat-stroked-button class="!border-neutral-700 !text-neutral-100"
+             href="https://github.com/SentenciaSQL/learn_kids_app" target="_blank" rel="noreferrer">
+            {{ learnkids().links.repo }}
+          </a>
+        </div>
+      </mat-card-content>
+    </mat-card>
 
   </div>
 </section>

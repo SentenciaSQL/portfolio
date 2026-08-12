@@ -123,6 +123,23 @@ export const MESSAGES: Record<Lang, any> = {
             api: 'API Repository',
             ui: 'Frontend Repository'
           }
+        },
+
+        pokemonEncyclopedia:{
+          name: 'Pokémon Encyclopedia',
+          subtitle: 'Pokémon Lookup Application',
+          stack: 'Kotlin · Android · Retrofit · MVVM',
+          summary:
+            'Android application that allows users to look up information about Pokémon using the public PokéAPI.',
+          bullets: [
+            'Implemented MVVM architecture to separate business logic from UI.',
+            'Used Retrofit for making HTTP requests to the PokéAPI.',
+            'Efficiently managed application lifecycle and optimized performance.',
+            'Designed an intuitive and user-friendly interface.'
+          ],
+          links: {
+            repo: 'Repository'
+          }
         }
       }
     },
@@ -279,6 +296,23 @@ export const MESSAGES: Record<Lang, any> = {
           links: {
             api: 'Repositorio API',
             ui: 'Repositorio Frontend'
+          }
+        },
+
+        pokemonEncyclopedia:{
+          name: 'Enciclopedia Pokémon',
+          subtitle: 'Aplicación de consulta de Pokémon',
+          stack: 'Kotlin · Android · Retrofit · MVVM',
+          summary:
+            'Aplicación Android que permite a los usuarios consultar información sobre Pokémon utilizando la API pública de PokéAPI.',
+          bullets: [
+            'Implementación de arquitectura MVVM para separar la lógica de negocio de la interfaz de usuario.',
+            'Uso de Retrofit para realizar solicitudes HTTP a la API de PokéAPI.',
+            'Manejo eficiente del ciclo de vida de la aplicación y optimización del rendimiento.',
+            'Diseño de una interfaz intuitiva y amigable para el usuario.'
+          ],
+          links: {
+            repo: 'Repositorio'
           }
         }
 

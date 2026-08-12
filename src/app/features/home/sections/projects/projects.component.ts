@@ -19,4 +19,5 @@ export class ProjectsComponent {
   learnkids = computed(() => this.i18n.dict().projects.items.learnKids);
   pagatodo = computed(() => this.i18n.dict().projects.items.pagatodo);
   teslShop = computed(() => this.i18n.dict().projects.items.tesloShop);
+  pokemonEncyclopedia = computed(() => this.i18n.dict().projects.items.pokemonEncyclopedia);
 }
