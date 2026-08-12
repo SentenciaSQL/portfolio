@@ -159,16 +159,17 @@ export const MESSAGES: Record<Lang, any> = {
           }
         },
 
-        netCore: {
-          name: '.NET Core Samples',
-          subtitle: 'Backend Services & APIs',
-          stack: 'C# · .NET',
+        pokeFlu: {
+          name: 'PokeFlu',
+          subtitle: 'Pokédex Mobile App',
+          stack: 'Flutter · Dart · Clean Architecture · PokéAPI',
           summary:
-            'Collection of backend-oriented samples using C# and .NET for APIs and service logic.',
+            'Modern Pokédex mobile app built with Flutter, Clean Architecture, and PokéAPI for browsing, searching, and exploring Pokémon.',
           bullets: [
-            'Implemented backend services and API endpoints with .NET.',
-            'Applied C# patterns for business logic and integrations.',
-            'Useful reference for enterprise-style .NET development.'
+            'Responsive Pokédex grid with infinite scroll, search, and type filters.',
+            'Detail screens with evolution chains, moves, abilities, and animated base stats.',
+            'Local favorites, offline cache, and light/dark theme persistence.',
+            'Feature-first Clean Architecture with Riverpod, Dio, and GoRouter.'
           ],
           links: {
             repo: 'Repository'
@@ -424,16 +425,17 @@ export const MESSAGES: Record<Lang, any> = {
           }
         },
 
-        netCore: {
-          name: 'Ejemplos .NET Core',
-          subtitle: 'Servicios Backend y APIs',
-          stack: 'C# · .NET',
+        pokeFlu: {
+          name: 'PokeFlu',
+          subtitle: 'App Móvil Pokédex',
+          stack: 'Flutter · Dart · Clean Architecture · PokéAPI',
           summary:
-            'Colección de ejemplos backend con C# y .NET orientados a APIs y lógica de servicio.',
+            'App móvil Pokédex moderna construida con Flutter, Clean Architecture y PokéAPI para explorar, buscar y filtrar Pokémon.',
           bullets: [
-            'Servicios backend y endpoints API con .NET.',
-            'Patrones C# para lógica de negocio e integraciones.',
-            'Referencia práctica de desarrollo .NET de estilo empresarial.'
+            'Grid responsivo con scroll infinito, búsqueda y filtros por tipo.',
+            'Pantallas de detalle con cadenas de evolución, movimientos, habilidades y stats animados.',
+            'Favoritos locales, caché offline y persistencia de tema claro/oscuro.',
+            'Arquitectura limpia feature-first con Riverpod, Dio y GoRouter.'
           ],
           links: {
             repo: 'Repositorio'
