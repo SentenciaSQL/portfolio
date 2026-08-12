@@ -28,11 +28,10 @@ export const PROJECTS: ProjectMeta[] = [
     ],
   },
   {
-    id: 'learnKids',
-    featured: true,
-    stacks: ['Flutter', 'Dart'],
+    id: 'stockWise',
+    stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/learn_kids_app'},
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/StockWise-App'},
     ],
   },
   {
@@ -61,17 +60,18 @@ export const PROJECTS: ProjectMeta[] = [
     ],
   },
   {
-    id: 'stockWise',
-    stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
-    links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/StockWise-App'},
-    ],
-  },
-  {
     id: 'pokeFlu',
     stacks: ['Flutter', 'Dart', 'Android'],
     links: [
       {kind: 'repo', url: 'https://github.com/SentenciaSQL/PokeFlu'},
+    ],
+  },
+  {
+    id: 'learnKids',
+    featured: true,
+    stacks: ['Flutter', 'Dart'],
+    links: [
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/learn_kids_app'},
     ],
   },
   {
