@@ -39,16 +39,16 @@ export const MESSAGES: Record<Lang, any> = {
         },
 
         blood: {
-          name: 'Blood Donation Platform',
-          subtitle: 'Social Impact Application',
-          stack: 'Spring Boot · Angular · Geolocation',
+          name: 'BloodConnectRD',
+          subtitle: 'Blood Donation Platform for the Dominican Republic',
+          stack: 'Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT',
           summary:
-            'Platform that connects blood donors with recipients through location-based search and donor registry.',
+            'Platform that connects people who need blood with available donors, hospitals, clinics, and blood banks in the Dominican Republic.',
           bullets: [
-            'Implemented donor registration and blood type management.',
-            'Designed search flows based on location and availability.',
-            'Backend-focused architecture with clean REST endpoints.',
-            'Project designed for real-world social impact scenarios.',
+            'Monorepo with a Spring Boot API, Angular web app, and Flutter mobile client sharing PostgreSQL.',
+            'Donor registry, blood requests, compatible-donor search, and donation center management.',
+            'JWT authentication, Flyway migrations, OpenAPI/Swagger, and Docker Compose.',
+            'Internal and push notifications plus an admin panel with statistics.',
           ],
           links: {
             repo: 'Repository',
@@ -152,6 +152,40 @@ export const MESSAGES: Record<Lang, any> = {
             'Stock movements, transfers, low-stock detection, and dashboard analytics.',
             'Angular SaaS UI and Flutter mobile client consuming the same Spring Boot API.',
             'Flyway migrations, OpenAPI/Swagger, and Docker Compose for local full-stack runs.',
+          ],
+          links: {
+            repo: 'Repository',
+          },
+        },
+
+        finTrack: {
+          name: 'FinTrack',
+          subtitle: 'Personal Finance Platform',
+          stack: 'Flutter · Dart · C# · .NET · PostgreSQL · JWT',
+          summary:
+            'Bilingual personal finance platform with a Flutter mobile app, ASP.NET Core REST API, and PostgreSQL.',
+          bullets: [
+            'JWT-secured income and expense tracking with categories, budgets, savings goals, and recurring transactions.',
+            'Dashboard and reports with charts for spending, income vs expenses, and balance history.',
+            'Spanish/English switching, light/dark themes, and DOP/USD/EUR display.',
+            'Clean Architecture on .NET 8 with a Flutter client using Riverpod, Dio, and GoRouter.',
+          ],
+          links: {
+            repo: 'Repository',
+          },
+        },
+
+        expenseTracker: {
+          name: 'Expense Tracker',
+          subtitle: 'Offline Personal Finance App',
+          stack: 'Flutter · Dart · Hive · Material 3',
+          summary:
+            'Offline-first Flutter app for tracking income, expenses, budgets, and savings goals with local persistence — no backend or accounts.',
+          bullets: [
+            'Dashboard with balance, period totals, budgets, and charts using local Hive storage.',
+            'Transaction CRUD with search, filters, recurring movements, and savings goals.',
+            'Monthly budgets with 80%/100%/overspend alerts and CSV/PDF export.',
+            'Feature-first Clean Architecture with Riverpod, GoRouter, and Material 3.',
           ],
           links: {
             repo: 'Repository',
@@ -348,16 +382,16 @@ export const MESSAGES: Record<Lang, any> = {
         },
 
         blood: {
-          name: 'Plataforma de Donación de Sangre',
-          subtitle: 'Aplicación de Impacto Social',
-          stack: 'Spring Boot · Angular · Geolocalización',
+          name: 'BloodConnectRD',
+          subtitle: 'Plataforma de Donación de Sangre en República Dominicana',
+          stack: 'Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT',
           summary:
-            'Plataforma que conecta donantes de sangre con receptores mediante búsqueda por ubicación.',
+            'Plataforma que conecta a personas que necesitan sangre con donantes disponibles, hospitales, clínicas y bancos de sangre en República Dominicana.',
           bullets: [
-            'Registro de donantes y gestión de tipos de sangre.',
-            'Flujos de búsqueda basados en ubicación y disponibilidad.',
-            'Arquitectura backend clara con endpoints REST.',
-            'Proyecto orientado a escenarios reales de impacto social.',
+            'Monorepo con API Spring Boot, web Angular y cliente móvil Flutter compartiendo PostgreSQL.',
+            'Registro de donantes, solicitudes de sangre, búsqueda de donantes compatibles y gestión de centros.',
+            'Autenticación JWT, migraciones Flyway, OpenAPI/Swagger y Docker Compose.',
+            'Notificaciones internas y push, más un panel administrativo con estadísticas.',
           ],
           links: {
             repo: 'Repositorio',
@@ -458,6 +492,40 @@ export const MESSAGES: Record<Lang, any> = {
             'Movimientos de stock, transferencias, detección de stock bajo y analítica de dashboard.',
             'UI SaaS en Angular y cliente móvil Flutter consumiendo la misma API Spring Boot.',
             'Migraciones Flyway, OpenAPI/Swagger y Docker Compose para ejecución full-stack local.',
+          ],
+          links: {
+            repo: 'Repositorio',
+          },
+        },
+
+        finTrack: {
+          name: 'FinTrack',
+          subtitle: 'Plataforma de Finanzas Personales',
+          stack: 'Flutter · Dart · C# · .NET · PostgreSQL · JWT',
+          summary:
+            'Plataforma bilingüe de finanzas personales con app Flutter, API REST ASP.NET Core y PostgreSQL.',
+          bullets: [
+            'Seguimiento de ingresos y gastos con JWT, categorías, presupuestos, metas de ahorro y recurrentes.',
+            'Dashboard y reportes con gráficos de gastos, ingresos vs egresos e historial de balance.',
+            'Cambio de idioma español/inglés, temas claro/oscuro y visualización en DOP/USD/EUR.',
+            'Clean Architecture en .NET 8 y cliente Flutter con Riverpod, Dio y GoRouter.',
+          ],
+          links: {
+            repo: 'Repositorio',
+          },
+        },
+
+        expenseTracker: {
+          name: 'Expense Tracker',
+          subtitle: 'App de Finanzas Personales Offline',
+          stack: 'Flutter · Dart · Hive · Material 3',
+          summary:
+            'App Flutter offline-first para registrar ingresos, gastos, presupuestos y metas de ahorro con persistencia local, sin backend ni cuentas.',
+          bullets: [
+            'Dashboard con balance, totales del periodo, presupuestos y gráficos usando almacenamiento local Hive.',
+            'CRUD de transacciones con búsqueda, filtros, movimientos recurrentes y metas de ahorro.',
+            'Presupuestos mensuales con alertas al 80%/100%/sobrecosto y exportación CSV/PDF.',
+            'Arquitectura limpia por features con Riverpod, GoRouter y Material 3.',
           ],
           links: {
             repo: 'Repositorio',

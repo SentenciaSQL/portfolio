@@ -50,12 +50,26 @@ This repository contains the source code of my **personal portfolio website**.
 - Asset management, work orders, and preventive maintenance
 - Layered architecture and secure REST APIs
 
-### 🔹 Blood Donation Platform
-**Social Impact Application**
+### 🔹 BloodConnectRD
+**Blood Donation Platform for the Dominican Republic**
 
-- Spring Boot · Angular · Geolocation
-- Donor registry and location-based search
-- Designed for real-world humanitarian scenarios
+- Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT
+- Donor registry, blood requests, and compatible-donor search
+- Web, mobile, and admin panel sharing one Spring Boot API
+
+### 🔹 FinTrack
+**Personal Finance Platform**
+
+- Flutter · Dart · C# · .NET · PostgreSQL · JWT
+- Income/expense tracking, budgets, savings goals, and reports
+- Bilingual Spanish/English Flutter app with ASP.NET Core API
+
+### 🔹 Expense Tracker
+**Offline Personal Finance App**
+
+- Flutter · Dart · Hive · Material 3
+- Local-only income, expenses, budgets, and savings goals
+- CSV/PDF export with no backend or accounts
 
 ### 🔹 Beauty Spa Management System
 **Reservation & Service Management**
