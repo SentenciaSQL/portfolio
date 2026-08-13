@@ -52,7 +52,6 @@ export const PROJECTS: ProjectMeta[] = [
   },
   {
     id: 'pagatodo',
-    featured: true,
     stacks: ['Angular'],
     links: [
       {kind: 'admin', url: 'https://github.com/SentenciaSQL/pagatodo-admin'},
