@@ -13,9 +13,9 @@ export const PROJECTS: ProjectMeta[] = [
   {
     id: 'blood',
     featured: true,
-    stacks: ['Java', 'Spring Boot', 'Angular'],
+    stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/blood-donation-platform'},
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/BloodConnectRD'},
     ],
   },
   {
@@ -33,6 +33,21 @@ export const PROJECTS: ProjectMeta[] = [
     stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
       {kind: 'repo', url: 'https://github.com/SentenciaSQL/StockWise-App'},
+    ],
+  },
+  {
+    id: 'finTrack',
+    featured: true,
+    stacks: ['Flutter', 'Dart', 'C#', '.NET'],
+    links: [
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/FinTrack'},
+    ],
+  },
+  {
+    id: 'expenseTracker',
+    stacks: ['Flutter', 'Dart'],
+    links: [
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/expense-tracker'},
     ],
   },
   {
