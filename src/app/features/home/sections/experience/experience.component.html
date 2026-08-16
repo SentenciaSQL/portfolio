@@ -1,41 +1,36 @@
-<section class="py-10 border-t border-neutral-800">
-  <h2 class="text-2xl font-semibold">{{ i18n.t('experience.title') }}</h2>
-
-  <div class="mt-6 grid gap-4">
-    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
-      <mat-card-content class="p-6">
-        <div class="font-semibold">OneSeven Tech (USA) · Senior Full Stack Developer</div>
-        <div class="mt-2 text-sm text-neutral-300">
-          Java · Angular · AWS · JWT · SaaS · High-traffic audience builder platform
-        </div>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
-      <mat-card-content class="p-6">
-        <div class="font-semibold">The CE Shop (USA) · Senior Systems Engineer</div>
-        <div class="mt-2 text-sm text-neutral-300">
-          Java / Spring Boot · Angular · React · AWS · PostgreSQL · High-traffic e-commerce & LMS
-        </div>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
-      <mat-card-content class="p-6">
-        <div class="font-semibold">Indra Sistemas · Senior Systems Engineer</div>
-        <div class="mt-2 text-sm text-neutral-300">
-          Java · Angular · React · Oracle PL/SQL · Performance optimization · Flutter migration
-        </div>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
-      <mat-card-content class="p-6">
-        <div class="font-semibold">Excellent Integrity Solutions · Full Stack Developer</div>
-        <div class="mt-2 text-sm text-neutral-300">
-          Java EE · PHP · WordPress · Angular · Oracle PL/SQL · Multiple enterprise clients
-        </div>
-      </mat-card-content>
-    </mat-card>
+<section id="experience" class="section">
+  <div class="max-w-2xl" appReveal>
+    <p class="section-kicker">02</p>
+    <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">{{ i18n.t('experience.title') }}</h2>
   </div>
+
+  <ol class="relative mt-10 space-y-6 before:absolute before:top-2 before:bottom-2 before:left-[0.55rem] before:w-px before:bg-line sm:before:left-[0.7rem]">
+    @for (role of roles; track role.id) {
+      <li class="relative grid gap-4 pl-8 sm:pl-10 lg:grid-cols-12 lg:gap-8" appReveal>
+        <span
+          class="absolute top-2 left-0 h-3 w-3 rounded-full border border-brass bg-ink"
+          aria-hidden="true"
+        ></span>
+
+        <div class="lg:col-span-4">
+          <h3 class="text-lg font-semibold tracking-tight text-paper">{{ role.company }}</h3>
+          <p class="mt-1 text-sm text-brass">{{ role.role }}</p>
+          @if (role.location) {
+            <p class="mt-1 font-mono text-xs text-mute">{{ role.location }}</p>
+          }
+        </div>
+
+        <div class="card p-5 lg:col-span-8">
+          <p class="text-sm leading-relaxed text-paper-dim">
+            {{ i18n.t('experience.items.' + role.id + '.summary') }}
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            @for (tech of role.technologies; track tech) {
+              <span class="badge">{{ tech }}</span>
+            }
+          </div>
+        </div>
+      </li>
+    }
+  </ol>
 </section>

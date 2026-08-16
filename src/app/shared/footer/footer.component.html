@@ -1,0 +1,46 @@
+<footer class="border-t border-line-soft">
+  <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+    <div>
+      <p class="font-semibold tracking-tight text-paper">{{ site.name }}</p>
+      <p class="mt-1 text-sm text-mute">{{ i18n.t('footer.role') }}</p>
+    </div>
+
+    <nav class="flex flex-wrap items-center gap-4 text-sm" aria-label="Footer">
+      <a
+        class="inline-flex items-center gap-1.5 text-paper-dim no-underline hover:text-paper"
+        [href]="site.github"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <app-icon name="github" />
+        GitHub
+      </a>
+      <a
+        class="inline-flex items-center gap-1.5 text-paper-dim no-underline hover:text-paper"
+        [href]="site.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <app-icon name="linkedin" />
+        LinkedIn
+      </a>
+      <a
+        class="inline-flex items-center gap-1.5 text-paper-dim no-underline hover:text-paper"
+        [href]="'mailto:' + site.email"
+      >
+        <app-icon name="mail" />
+        Email
+      </a>
+      <a routerLink="/privacy" class="text-paper-dim no-underline hover:text-paper">
+        {{ i18n.t('footer.privacy') }}
+      </a>
+    </nav>
+  </div>
+
+  <div class="border-t border-line-soft">
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-mute sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <p>© {{ year }} {{ site.name }}</p>
+      <p>{{ site.location }} · {{ site.timezone }}</p>
+    </div>
+  </div>
+</footer>

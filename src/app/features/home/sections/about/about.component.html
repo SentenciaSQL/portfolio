@@ -1,6 +1,20 @@
-<section class="py-10 border-t border-neutral-800">
-  <h2 class="text-2xl font-semibold">{{ i18n.t('about.title') }}</h2>
-  <p class="mt-4 text-neutral-300 leading-relaxed max-w-3xl">
-    {{ i18n.t('about.body') }}
-  </p>
+<section id="about" class="section">
+  <div class="grid gap-10 lg:grid-cols-12" appReveal>
+    <div class="lg:col-span-4">
+      <p class="section-kicker">01</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">{{ i18n.t('about.title') }}</h2>
+    </div>
+    <div class="lg:col-span-8">
+      <p class="max-w-2xl text-base leading-relaxed text-paper-dim sm:text-lg">
+        {{ i18n.t('about.body') }}
+      </p>
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+        @for (stat of stats; track stat) {
+          <li class="card px-4 py-3 text-sm text-paper">
+            {{ i18n.t('about.stats.' + stat) }}
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
 </section>

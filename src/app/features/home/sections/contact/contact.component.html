@@ -1,45 +1,78 @@
-<section class="py-10 border-t border-neutral-800">
-  <h2 class="text-2xl font-semibold">{{ i18n.t('contact.title') }}</h2>
-  <p class="mt-2 text-neutral-300">{{ i18n.t('contact.subtitle') }}</p>
+<section id="contact" class="section">
+  <div class="card mx-auto max-w-3xl px-6 py-12 text-center sm:px-10 sm:py-14" appReveal>
+    <p class="section-kicker !mb-4 justify-center before:hidden">05</p>
+    <h2 class="font-serif text-3xl tracking-tight sm:text-5xl">{{ i18n.t('contact.title') }}</h2>
+    <p class="mx-auto mt-4 max-w-xl text-paper-dim">
+      {{ i18n.t('contact.subtitle') }}
+    </p>
 
-  <div class="mt-6 grid md:grid-cols-3 gap-4">
-    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
-      <mat-card-content class="p-6">
-        <div class="text-sm text-neutral-400">{{ i18n.t('contact.email') }}</div>
-        <a class="mt-2 block text-neutral-100 underline underline-offset-4" href="mailto:afriasdev@gmail.com">
-          afriasdev@gmail.com
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a class="btn-primary" [href]="'mailto:' + site.email">
+        <app-icon name="mail" />
+        {{ i18n.t('contact.cta') }}
+      </a>
+      <a class="btn-secondary" [href]="site.cv" target="_blank" rel="noopener noreferrer">
+        <app-icon name="download" />
+        {{ i18n.t('nav.downloadCv') }}
+      </a>
+    </div>
+
+    <ul class="mt-10 grid gap-3 text-left sm:grid-cols-2">
+      <li>
+        <a class="card flex items-center gap-3 px-4 py-3 no-underline hover:border-brass/40" [href]="'mailto:' + site.email">
+          <app-icon name="mail" />
+          <span>
+            <span class="block text-xs text-mute">{{ i18n.t('contact.email') }}</span>
+            <span class="text-sm text-paper">{{ site.email }}</span>
+          </span>
         </a>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
-      <mat-card-content class="p-6">
-        <div class="text-sm text-neutral-400">{{ i18n.t('contact.linkedin') }}</div>
-        <a class="mt-2 block text-neutral-100 underline underline-offset-4"
-           href="https://www.linkedin.com/in/andres-frias-guzman/" target="_blank" rel="noreferrer">
-          /in/andres-frias-guzman
+      </li>
+      <li>
+        <a
+          class="card flex items-center gap-3 px-4 py-3 no-underline hover:border-brass/40"
+          [href]="site.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <app-icon name="linkedin" />
+          <span>
+            <span class="block text-xs text-mute">{{ i18n.t('contact.linkedin') }}</span>
+            <span class="text-sm text-paper">{{ site.linkedinLabel }}</span>
+          </span>
         </a>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl">
-      <mat-card-content class="p-6">
-        <div class="text-sm text-neutral-400">{{ i18n.t('contact.github') }}</div>
-        <a class="mt-2 block text-neutral-100 underline underline-offset-4"
-           href="https://github.com/SentenciaSQL" target="_blank" rel="noreferrer">
-          github.com/SentenciaSQL
+      </li>
+      <li>
+        <a
+          class="card flex items-center gap-3 px-4 py-3 no-underline hover:border-brass/40"
+          [href]="site.github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <app-icon name="github" />
+          <span>
+            <span class="block text-xs text-mute">{{ i18n.t('contact.github') }}</span>
+            <span class="text-sm text-paper">{{ site.githubLabel }}</span>
+          </span>
         </a>
+      </li>
+      <li>
+        <a
+          class="card flex items-center gap-3 px-4 py-3 no-underline hover:border-brass/40"
+          [href]="site.portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <app-icon name="globe" />
+          <span>
+            <span class="block text-xs text-mute">{{ i18n.t('contact.portfolio') }}</span>
+            <span class="text-sm text-paper">andresfrias.dev</span>
+          </span>
+        </a>
+      </li>
+    </ul>
 
-        <div class="mt-4 text-sm text-neutral-400">{{ i18n.t('contact.timezone') }}</div>
-        <div class="mt-1 text-neutral-200 text-sm">GMT-4 (America/Santo_Domingo)</div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-  <div class="mt-6">
-    <a mat-stroked-button class="!border-neutral-700 !text-neutral-100" href="/Andres_Frias_CV.pdf" target="_blank" rel="noreferrer">
-      <mat-icon class="mr-2">download</mat-icon>
-      {{ i18n.t('nav.downloadCv') }}
-    </a>
+    <p class="mt-8 text-xs text-mute">
+      {{ i18n.t('contact.timezone') }} · {{ site.timezoneName }} ({{ site.timezone }})
+    </p>
   </div>
 </section>
