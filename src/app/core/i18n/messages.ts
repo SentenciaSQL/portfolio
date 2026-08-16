@@ -21,20 +21,19 @@ export const MESSAGES: Record<Lang, any> = {
       viewAll: 'View all projects',
       items: {
         cmms: {
-          name: 'CMMS Platform',
+          name: 'CMMS-Platform',
           subtitle: 'Enterprise Maintenance Management System',
-          stack: 'Java · Spring Boot · Angular · PostgreSQL · JWT',
+          stack: 'Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT',
           summary:
-            'Full-stack enterprise system designed to manage assets, work orders, and preventive maintenance workflows.',
+            'Full-stack enterprise CMMS to manage assets, work orders, and preventive maintenance — web, mobile, and API in one monorepo.',
           bullets: [
-            'Designed and implemented secure REST APIs using Spring Boot and JWT authentication.',
-            'Applied layered architecture with clear separation of concerns (controllers, services, repositories).',
-            'Built a modular Angular frontend integrated with backend services.',
-            'Focused on maintainability, scalability, and real-world enterprise workflows.',
+            'Monorepo with a Spring Boot API, Angular web app, and Flutter mobile client sharing PostgreSQL.',
+            'JWT authentication, Flyway migrations, OpenAPI/Swagger, and Docker Compose.',
+            'Work orders, preventive plans, inventory, reliability, and technician mobile workflows.',
+            'Clean Architecture on the backend with a modular Angular UI and a Flutter field app.',
           ],
           links: {
-            api: 'API Repository',
-            ui: 'Frontend Repository',
+            repo: 'Repository',
           },
         },
 
@@ -364,20 +363,19 @@ export const MESSAGES: Record<Lang, any> = {
       viewAll: 'Ver todos los proyectos',
       items: {
         cmms: {
-          name: 'Plataforma CMMS',
+          name: 'CMMS-Platform',
           subtitle: 'Sistema Empresarial de Gestión de Mantenimiento',
-          stack: 'Java · Spring Boot · Angular · PostgreSQL · JWT',
+          stack: 'Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT',
           summary:
-            'Sistema empresarial full-stack para la gestión de activos, órdenes de trabajo y mantenimiento preventivo.',
+            'CMMS empresarial full-stack para gestionar activos, órdenes de trabajo y mantenimiento preventivo: web, móvil y API en un monorepo.',
           bullets: [
-            'Diseño e implementación de APIs REST seguras con Spring Boot y autenticación JWT.',
-            'Arquitectura en capas con separación clara de responsabilidades.',
-            'Frontend Angular modular integrado con servicios backend.',
-            'Enfoque en mantenibilidad, escalabilidad y flujos empresariales reales.',
+            'Monorepo con API Spring Boot, web Angular y cliente móvil Flutter compartiendo PostgreSQL.',
+            'Autenticación JWT, migraciones Flyway, OpenAPI/Swagger y Docker Compose.',
+            'Órdenes de trabajo, planes preventivos, inventario, confiabilidad y flujos móviles del técnico.',
+            'Clean Architecture en el backend, UI Angular modular y app Flutter de campo.',
           ],
           links: {
-            api: 'Repositorio API',
-            ui: 'Repositorio Frontend',
+            repo: 'Repositorio',
           },
         },
 

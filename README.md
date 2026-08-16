@@ -43,12 +43,12 @@ This repository contains the source code of my **personal portfolio website**.
 
 ## 📂 Featured Projects
 
-### 🔹 CMMS Platform
+### 🔹 CMMS-Platform
 **Enterprise Maintenance Management System**
 
-- Java · Spring Boot · Angular · PostgreSQL · JWT
-- Asset management, work orders, and preventive maintenance
-- Layered architecture and secure REST APIs
+- Java · Spring Boot · Angular · Flutter · PostgreSQL · JWT
+- Monorepo with web, mobile, and API for assets, work orders, and preventive maintenance
+- JWT, Flyway, OpenAPI/Swagger, and Docker Compose
 
 ### 🔹 BloodConnectRD
 **Blood Donation Platform for the Dominican Republic**
