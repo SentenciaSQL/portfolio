@@ -1,5 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {I18nService} from '../../../../core/i18n/i18n.service';
+import {openEmail} from '../../../../core/site/open-email';
 import {SITE} from '../../../../core/site/site.constants';
 import {IconComponent} from '../../../../shared/icon/icon.component';
 import {RevealDirective} from '../../../../shared/reveal/reveal.directive';
@@ -13,4 +14,5 @@ import {RevealDirective} from '../../../../shared/reveal/reveal.directive';
 export class ContactComponent {
   readonly i18n = inject(I18nService);
   readonly site = SITE;
+  readonly openEmail = openEmail;
 }
