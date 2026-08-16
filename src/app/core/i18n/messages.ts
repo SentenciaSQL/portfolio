@@ -37,6 +37,23 @@ export const MESSAGES: Record<Lang, any> = {
           },
         },
 
+        comercia: {
+          name: 'Comercia-multi-tenant',
+          subtitle: 'Multi-tenant Commercial SaaS Platform',
+          stack: 'Java · Spring Boot · Angular · PostgreSQL · Redis · JWT',
+          summary:
+            'SaaS platform for commerce, suppliers, and consumers with logical multi-tenant isolation on shared PostgreSQL.',
+          bullets: [
+            'Hexagonal / Clean Architecture Spring Boot API with Angular 20 web, Capacitor, and Tauri clients.',
+            'Tenant isolation via JWT and a Hibernate filter; cross-tenant access returns 404.',
+            'Catalog, dual-location inventory, POS/cash register, supplier orders with chat, and consumer pickup codes.',
+            'JWT with refresh rotation, RBAC, Redis rate-limit, OpenAPI/Swagger, and Docker Compose.',
+          ],
+          links: {
+            repo: 'Repository',
+          },
+        },
+
         blood: {
           name: 'BloodConnectRD',
           subtitle: 'Blood Donation Platform for the Dominican Republic',
@@ -373,6 +390,23 @@ export const MESSAGES: Record<Lang, any> = {
             'Autenticación JWT, migraciones Flyway, OpenAPI/Swagger y Docker Compose.',
             'Órdenes de trabajo, planes preventivos, inventario, confiabilidad y flujos móviles del técnico.',
             'Clean Architecture en el backend, UI Angular modular y app Flutter de campo.',
+          ],
+          links: {
+            repo: 'Repositorio',
+          },
+        },
+
+        comercia: {
+          name: 'Comercia-multi-tenant',
+          subtitle: 'Plataforma SaaS Comercial Multi-tenant',
+          stack: 'Java · Spring Boot · Angular · PostgreSQL · Redis · JWT',
+          summary:
+            'Plataforma SaaS para comercios, proveedores y consumidores con aislamiento multi-tenant lógico sobre PostgreSQL compartido.',
+          bullets: [
+            'API Spring Boot hexagonal / Clean Architecture con web Angular 20, Capacitor y Tauri.',
+            'Aislamiento de tenant por JWT y filtro Hibernate; el acceso cruzado entre tenants responde 404.',
+            'Catálogo, inventario de doble ubicación, POS/caja, pedidos a proveedor con chat y códigos de retiro.',
+            'JWT con rotación de refresh, RBAC, rate-limit Redis, OpenAPI/Swagger y Docker Compose.',
           ],
           links: {
             repo: 'Repositorio',

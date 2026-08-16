@@ -10,6 +10,14 @@ export const PROJECTS: ProjectMeta[] = [
     ],
   },
   {
+    id: 'comercia',
+    featured: true,
+    stacks: ['Java', 'Spring Boot', 'Angular'],
+    links: [
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/Comercia-multi-tenant'},
+    ],
+  },
+  {
     id: 'blood',
     featured: true,
     stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],

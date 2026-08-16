@@ -50,6 +50,13 @@ This repository contains the source code of my **personal portfolio website**.
 - Monorepo with web, mobile, and API for assets, work orders, and preventive maintenance
 - JWT, Flyway, OpenAPI/Swagger, and Docker Compose
 
+### 🔹 Comercia-multi-tenant
+**Multi-tenant Commercial SaaS Platform**
+
+- Java · Spring Boot · Angular · PostgreSQL · Redis · JWT
+- Tenant isolation, catalog, inventory, POS, supplier orders, and consumer pickup
+- Angular web plus Capacitor and Tauri clients on one Spring Boot API
+
 ### 🔹 BloodConnectRD
 **Blood Donation Platform for the Dominican Republic**
 
