@@ -27,7 +27,6 @@ export const PROJECTS: ProjectMeta[] = [
   },
   {
     id: 'spa',
-    featured: true,
     stacks: ['Python', 'Angular'],
     links: [
       {kind: 'api', url: 'https://github.com/SentenciaSQL/Beauty-Spa-API'},
