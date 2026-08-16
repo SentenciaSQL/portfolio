@@ -4,6 +4,7 @@ export type StackCategoryId =
   | 'mobile'
   | 'databases'
   | 'cloud'
+  | 'tools'
   | 'architecture';
 
 export interface StackCategory {
@@ -42,7 +43,7 @@ export const STACK_CATEGORIES: readonly StackCategory[] = [
   },
   {
     id: 'mobile',
-    items: ['Flutter', 'Dart', 'Kotlin', 'Android', 'Capacitor'],
+    items: ['Flutter', 'Dart', 'Ionic', 'Kotlin', 'Android', 'Capacitor'],
   },
   {
     id: 'databases',
@@ -59,5 +60,18 @@ export const STACK_CATEGORIES: readonly StackCategory[] = [
   {
     id: 'cloud',
     items: ['AWS (EC2 / S3 / RDS)', 'Docker', 'GitHub Actions', 'CI/CD'],
+  },
+  {
+    id: 'tools',
+    items: [
+      'Git',
+      'Bitbucket',
+      'IntelliJ IDEA',
+      'Visual Studio Code',
+      'Jira',
+      'SonarQube',
+      'Agile Methodology (Scrum/Kanban)',
+      'Scrum Framework',
+    ],
   },
 ];

@@ -44,6 +44,7 @@ export const MESSAGES: Record<Lang, any> = {
         mobile: 'Mobile',
         databases: 'Databases',
         cloud: 'Cloud & DevOps',
+        tools: 'Tools and Methodologies',
         architecture: 'Architecture',
       },
       architecture: [
@@ -468,6 +469,7 @@ export const MESSAGES: Record<Lang, any> = {
         mobile: 'Mobile',
         databases: 'Bases de datos',
         cloud: 'Cloud & DevOps',
+        tools: 'Tools and Methodologies',
         architecture: 'Arquitectura',
       },
       architecture: [
