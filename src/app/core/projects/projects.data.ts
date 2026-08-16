@@ -4,10 +4,9 @@ export const PROJECTS: ProjectMeta[] = [
   {
     id: 'cmms',
     featured: true,
-    stacks: ['Java', 'Spring Boot', 'Angular'],
+    stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
-      {kind: 'api', url: 'https://github.com/SentenciaSQL/cmms-api'},
-      {kind: 'ui', url: 'https://github.com/SentenciaSQL/cmms-angular-frontend'},
+      {kind: 'repo', url: 'https://github.com/SentenciaSQL/CMMS-Platform'},
     ],
   },
   {
