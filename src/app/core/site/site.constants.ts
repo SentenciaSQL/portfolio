@@ -3,6 +3,7 @@ export const SITE = {
   shortName: 'AF',
   role: 'Senior Full Stack Software Engineer',
   email: 'afriasdev@gmail.com',
+  mailto: 'mailto:afriasdev@gmail.com',
   github: 'https://github.com/SentenciaSQL',
   githubLabel: 'github.com/SentenciaSQL',
   linkedin: 'https://www.linkedin.com/in/andres-frias-guzman/',
