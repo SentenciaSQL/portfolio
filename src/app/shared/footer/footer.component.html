@@ -26,7 +26,8 @@
       </a>
       <a
         class="inline-flex items-center gap-1.5 text-paper-dim no-underline hover:text-paper"
-        [attr.href]="site.mailto"
+        href="mailto:afriasdev@gmail.com"
+        (click)="openEmail($event)"
       >
         <app-icon name="mail" />
         Email
