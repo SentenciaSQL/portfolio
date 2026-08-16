@@ -8,6 +8,7 @@ import {RevealDirective} from '../../../../shared/reveal/reveal.directive';
   selector: 'app-experience',
   imports: [RevealDirective],
   templateUrl: './experience.component.html',
+  styleUrl: './experience.component.css',
 })
 export class ExperienceComponent {
   readonly i18n = inject(I18nService);

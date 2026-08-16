@@ -4,30 +4,31 @@
     <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">{{ i18n.t('experience.title') }}</h2>
   </div>
 
-  <ol class="relative mt-10 space-y-6 before:absolute before:top-2 before:bottom-2 before:left-[0.55rem] before:w-px before:bg-line sm:before:left-[0.7rem]">
+  <ol class="experience-list mt-10">
     @for (role of roles; track role.id) {
-      <li class="relative grid gap-4 pl-8 sm:pl-10 lg:grid-cols-12 lg:gap-8" appReveal>
-        <span
-          class="absolute top-2 left-0 h-3 w-3 rounded-full border border-brass bg-ink"
-          aria-hidden="true"
-        ></span>
-
-        <div class="lg:col-span-4">
-          <h3 class="text-lg font-semibold tracking-tight text-paper">{{ role.company }}</h3>
-          <p class="mt-1 text-sm text-brass">{{ role.role }}</p>
-          @if (role.location) {
-            <p class="mt-1 font-mono text-xs text-mute">{{ role.location }}</p>
-          }
+      <li class="experience-item" [class.is-last]="$last" appReveal>
+        <div class="experience-rail" aria-hidden="true">
+          <span class="experience-dot"></span>
         </div>
 
-        <div class="card p-5 lg:col-span-8">
-          <p class="text-sm leading-relaxed text-paper-dim">
-            {{ i18n.t('experience.items.' + role.id + '.summary') }}
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            @for (tech of role.technologies; track tech) {
-              <span class="badge">{{ tech }}</span>
+        <div class="experience-body">
+          <div class="experience-meta">
+            <h3 class="text-lg font-semibold tracking-tight text-paper">{{ role.company }}</h3>
+            <p class="mt-1 text-sm text-brass">{{ role.role }}</p>
+            @if (role.location) {
+              <p class="mt-1 font-mono text-xs text-mute">{{ role.location }}</p>
             }
+          </div>
+
+          <div class="card p-5">
+            <p class="text-sm leading-relaxed text-paper-dim">
+              {{ i18n.t('experience.items.' + role.id + '.summary') }}
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              @for (tech of role.technologies; track tech) {
+                <span class="badge">{{ tech }}</span>
+              }
+            </div>
           </div>
         </div>
       </li>

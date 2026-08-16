@@ -28,29 +28,6 @@ export class ProjectCardComponent {
     return this.project().stacks;
   });
 
-  initials = computed(() => {
-    const name = this.content()?.name as string | undefined;
-    if (!name) {
-      return 'PR';
-    }
-    return name
-      .split(/[\s-]+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((part: string) => part[0])
-      .join('')
-      .toUpperCase();
-  });
-
-  tone = computed(() => {
-    const id = this.project().id;
-    let hash = 0;
-    for (let i = 0; i < id.length; i++) {
-      hash = (hash * 31 + id.charCodeAt(i)) >>> 0;
-    }
-    return hash % 4;
-  });
-
   bullets = computed(() => {
     const items = (this.content()?.bullets as string[] | undefined) ?? [];
     return this.compact() ? items.slice(0, 2) : items.slice(0, 3);

@@ -1,0 +1,56 @@
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  column-gap: 1.15rem;
+}
+
+.experience-rail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-rail::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  bottom: -1.75rem;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: var(--color-line);
+}
+
+.experience-item.is-last .experience-rail::before {
+  display: none;
+}
+
+.experience-dot {
+  position: relative;
+  z-index: 1;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin-top: 0.4rem;
+  border: 1.5px solid var(--color-brass);
+  border-radius: 999px;
+  background: var(--color-ink);
+}
+
+.experience-body {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .experience-body {
+    grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+    column-gap: 2rem;
+    align-items: start;
+  }
+}
