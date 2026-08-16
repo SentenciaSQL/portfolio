@@ -7,7 +7,7 @@
     </p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-3">
-      <a class="btn-primary" [href]="'mailto:' + site.email">
+      <a class="btn-primary" [attr.href]="site.mailto">
         <app-icon name="mail" />
         {{ i18n.t('contact.cta') }}
       </a>
@@ -19,7 +19,7 @@
 
     <ul class="mt-10 grid gap-3 text-left sm:grid-cols-2">
       <li>
-        <a class="card flex items-center gap-3 px-4 py-3 no-underline hover:border-brass/40" [href]="'mailto:' + site.email">
+        <a class="card flex items-center gap-3 px-4 py-3 no-underline hover:border-brass/40" [attr.href]="site.mailto">
           <app-icon name="mail" />
           <span>
             <span class="block text-xs text-mute">{{ i18n.t('contact.email') }}</span>
