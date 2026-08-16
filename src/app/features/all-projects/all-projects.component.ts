@@ -1,31 +1,20 @@
 import {Component, computed, inject, signal} from '@angular/core';
 import {RouterLink} from '@angular/router';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
 import {I18nService} from '../../core/i18n/i18n.service';
 import {PROJECTS} from '../../core/projects/projects.data';
 import {STACK_FILTERS, StackFilter} from '../../core/projects/stacks';
 import {ProjectCardComponent} from '../../shared/project-card/project-card.component';
+import {IconComponent} from '../../shared/icon/icon.component';
 
 @Component({
   standalone: true,
   selector: 'app-all-projects',
-  imports: [
-    RouterLink,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    ProjectCardComponent,
-  ],
+  imports: [RouterLink, ProjectCardComponent, IconComponent],
   templateUrl: './all-projects.component.html',
-  styleUrl: './all-projects.component.css',
 })
 export class AllProjectsComponent {
-  i18n = inject(I18nService);
-
+  readonly i18n = inject(I18nService);
   readonly stacks = STACK_FILTERS;
-  readonly year = new Date().getFullYear();
 
   selectedStacks = signal<StackFilter[]>([]);
 

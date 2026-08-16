@@ -1,20 +1,33 @@
-<section class="py-10 border-t border-neutral-800">
-  <h2 class="text-2xl font-semibold">{{ i18n.t("projects.title") }}</h2>
+<section id="projects" class="section">
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between" appReveal>
+    <div class="max-w-2xl">
+      <p class="section-kicker">04</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">{{ i18n.t('projects.title') }}</h2>
+      <p class="mt-3 text-paper-dim">{{ i18n.t('projects.subtitle') }}</p>
+    </div>
+    <a routerLink="/projects" class="btn-ghost !px-0 text-sm text-brass hover:text-brass-2">
+      {{ i18n.t('projects.viewAll') }}
+      <app-icon name="arrow-right" />
+    </a>
+  </div>
 
-  <div class="mt-6 grid lg:grid-cols-2 gap-4">
+  <div class="mt-10 grid gap-5 lg:grid-cols-2">
     @for (project of featuredProjects; track project.id) {
-      <app-project-card [project]="project" [showStacks]="false" />
+      <div appReveal>
+        <app-project-card [project]="project" [compact]="true" />
+      </div>
     }
   </div>
 
-  <div class="mt-8 flex justify-center">
+  <div class="mt-10 flex justify-center" appReveal>
     <a
-      mat-stroked-button
-      class="!border-neutral-700 !text-neutral-100"
-      routerLink="/projects"
+      class="btn-secondary"
+      [href]="site.github"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-      <mat-icon class="mr-1">apps</mat-icon>
-      {{ i18n.t("projects.viewAll") }}
+      <app-icon name="github" />
+      {{ i18n.t('projects.viewGithub') }}
     </a>
   </div>
 </section>

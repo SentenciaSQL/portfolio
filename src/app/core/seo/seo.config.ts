@@ -10,13 +10,13 @@ export const SITE_NAME = 'Andrés Frías';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const DEFAULT_KEYWORDS =
-  'Andrés Frías, Java, Spring Boot, Angular, Senior Software Engineer, Backend Engineer, Remote LATAM, Portfolio';
+  'Andrés Frías, Senior Full Stack Software Engineer, Java, Spring Boot, Angular, React, TypeScript, .NET, Remote LATAM, Portfolio';
 
 export const HOME_SEO: PageSeo = {
   path: '/',
-  title: 'Andrés Frías | Senior Java & Spring Boot Engineer',
+  title: 'Andrés Frías | Senior Full Stack Software Engineer',
   description:
-    'Senior Java / Spring Boot Engineer with 13+ years building enterprise backend systems, scalable REST APIs, and Angular frontends. Remote LATAM → US.',
+    'Senior Full Stack Software Engineer with 13+ years building enterprise applications, SaaS platforms, and scalable systems with Java, Spring Boot, Angular, React, and .NET. Remote LATAM → US.',
   keywords: DEFAULT_KEYWORDS,
 };
 
@@ -47,7 +47,7 @@ export const PERSON_JSON_LD = {
   '@type': 'Person',
   name: 'Andrés Frías',
   alternateName: 'Andres Frias',
-  jobTitle: 'Senior Software Engineer',
+  jobTitle: 'Senior Full Stack Software Engineer',
   description: HOME_SEO.description,
   url: SITE_URL,
   image: DEFAULT_OG_IMAGE,
@@ -65,11 +65,16 @@ export const PERSON_JSON_LD = {
     'Java',
     'Spring Boot',
     'Angular',
+    'React',
+    'TypeScript',
+    '.NET',
     'REST APIs',
     'PostgreSQL',
     'Oracle',
+    'AWS',
+    'Docker',
     'Clean Architecture',
-    'Backend Engineering',
+    'Full Stack Engineering',
   ],
 };
 

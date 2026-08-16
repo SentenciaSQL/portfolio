@@ -59,7 +59,7 @@ export class SeoService {
     this.updateTag('property', 'og:description', page.description);
     this.updateTag('property', 'og:url', url);
     this.updateTag('property', 'og:image', DEFAULT_OG_IMAGE);
-    this.updateTag('property', 'og:image:alt', `${SITE_NAME} — Senior Software Engineer`);
+    this.updateTag('property', 'og:image:alt', `${SITE_NAME} — Senior Full Stack Software Engineer`);
     this.updateTag('property', 'og:locale', 'en_US');
     this.updateTag('property', 'og:locale:alternate', 'es_DO');
 

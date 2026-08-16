@@ -1,40 +1,51 @@
 @if (content(); as item) {
-  <mat-card class="!bg-neutral-900/40 !border !border-neutral-800 !shadow-none rounded-2xl !h-full">
-    <mat-card-content class="p-6 flex flex-col h-full" style="display: flex">
-      <div class="flex-1">
-        <div class="font-semibold text-lg">{{ item.name }}</div>
-        <div class="mt-1 text-sm text-neutral-400">{{ item.subtitle }}</div>
-        <div class="mt-1 text-sm text-neutral-400">{{ item.stack }}</div>
+  <article class="card flex h-full flex-col overflow-hidden transition-colors duration-200 hover:border-brass/35">
+    <div
+      class="relative isolate flex h-36 items-end overflow-hidden border-b border-line px-5 py-4 sm:h-40"
+      [attr.data-tone]="tone()"
+      aria-hidden="true"
+    >
+      <div class="project-cover absolute inset-0" [attr.data-tone]="tone()"></div>
+      <div class="relative flex w-full items-end justify-between gap-3">
+        <span class="font-mono text-3xl font-medium tracking-tight text-brass/80">{{ initials() }}</span>
+        <span class="max-w-[70%] text-right text-xs text-paper-dim">{{ item.subtitle }}</span>
+      </div>
+    </div>
 
-        @if (showStacks()) {
-          <div class="mt-3 flex flex-wrap gap-2">
-            @for (stack of project().stacks; track stack) {
-              <span class="px-2.5 py-1 rounded-full border border-neutral-800 text-xs text-neutral-300">
-                {{ stack }}
-              </span>
-            }
-          </div>
+    <div class="flex flex-1 flex-col p-5 sm:p-6">
+      <h3 class="text-lg font-semibold tracking-tight text-paper">{{ item.name }}</h3>
+      <p class="mt-2 text-sm leading-relaxed text-paper-dim">{{ item.summary }}</p>
+
+      <div class="mt-4 flex flex-wrap gap-2">
+        @for (badge of badges(); track badge) {
+          <span class="badge">{{ badge }}</span>
         }
-
-        <p class="mt-3 text-neutral-400 text-sm">
-          {{ item.summary }}
-        </p>
-
-        <ul class="mt-4 text-neutral-300 text-sm leading-relaxed space-y-2">
-          @for (feature of item.bullets; track $index) {
-            <li>• {{ feature }}</li>
-          }
-        </ul>
       </div>
 
-      <div class="flex flex-wrap items-start gap-4 mt-6">
+      @if (bullets().length) {
+        <ul class="mt-4 space-y-2 text-sm text-paper-dim">
+          @for (feature of bullets(); track $index) {
+            <li class="flex gap-2">
+              <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-brass"></span>
+              <span>{{ feature }}</span>
+            </li>
+          }
+        </ul>
+      }
+
+      <div class="mt-6 flex flex-wrap gap-2">
         @for (link of project().links; track link.url) {
-          <a mat-stroked-button class="!border-neutral-700 !text-neutral-100"
-             [href]="link.url" target="_blank" rel="noreferrer">
+          <a
+            class="btn-secondary !px-3 !py-2 text-xs"
+            [href]="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <app-icon name="github" />
             {{ linkLabel(link.kind) }}
           </a>
         }
       </div>
-    </mat-card-content>
-  </mat-card>
+    </div>
+  </article>
 }

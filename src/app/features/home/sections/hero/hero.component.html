@@ -1,52 +1,82 @@
-<section class="py-14 sm:py-20">
-  <div class="grid lg:grid-cols-12 gap-10 items-start">
+<section id="home" class="relative overflow-hidden pb-16 pt-14 sm:pb-20 sm:pt-20 lg:pb-24 lg:pt-24">
+  <div
+    class="pointer-events-none absolute inset-0 opacity-40"
+    aria-hidden="true"
+    style="background:
+      radial-gradient(720px 320px at 12% -10%, color-mix(in srgb, var(--color-brass) 16%, transparent), transparent 70%),
+      radial-gradient(520px 240px at 92% 8%, color-mix(in srgb, var(--color-brass) 8%, transparent), transparent 68%);"
+  ></div>
+
+  <div class="relative grid items-center gap-10 lg:grid-cols-12" appReveal>
     <div class="lg:col-span-8">
-      <h1 class="text-3xl sm:text-5xl font-semibold leading-tight">
-        {{ i18n.t('hero.title') }}
+      <p class="section-kicker !mb-5">{{ i18n.t('hero.kicker') }}</p>
+      <h1 class="font-serif text-[2.35rem] leading-[1.08] tracking-tight text-paper sm:text-6xl">
+        {{ site.name }}
       </h1>
-      <p class="mt-3 text-neutral-300 text-lg">
-        {{ i18n.t('hero.subtitle') }}
-      </p>
-      <p class="mt-6 text-neutral-300 leading-relaxed">
+      <p class="mt-5 max-w-2xl text-base leading-relaxed text-paper-dim sm:text-lg">
         {{ i18n.t('hero.blurb') }}
       </p>
 
-      <div class="mt-8 flex flex-wrap gap-3">
-        <!-- Cambia href a tu CV en assets o link público -->
-        <a mat-raised-button class="!bg-neutral-100 !text-neutral-900" href="/Andres_Frias_CV.pdf" target="_blank" rel="noreferrer">
-          <mat-icon class="mr-2">download</mat-icon>
-          {{ i18n.t('hero.ctaPrimary') }}
-        </a>
-
-        <a mat-stroked-button class="!border-neutral-700 !text-neutral-100" href="https://github.com/SentenciaSQL" target="_blank" rel="noreferrer">
-          <mat-icon class="mr-2">code</mat-icon>
-          {{ i18n.t('hero.ctaSecondary') }}
-        </a>
-
-        <a mat-button class="!text-neutral-200" href="https://www.linkedin.com/in/andres-frias-guzman/" target="_blank" rel="noreferrer">
-          <mat-icon class="mr-2">open_in_new</mat-icon>
-          LinkedIn
-        </a>
+      <div class="mt-7 flex flex-wrap gap-2">
+        @for (tech of techs; track tech) {
+          <span class="badge">{{ tech }}</span>
+        }
       </div>
 
-      <div class="mt-8 flex flex-wrap gap-2 text-sm text-neutral-400">
-        <span class="px-3 py-1 rounded-full border border-neutral-800">Java · Spring Boot · APIs</span>
-        <span class="px-3 py-1 rounded-full border border-neutral-800">Angular · React · TypeScript</span>
-        <span class="px-3 py-1 rounded-full border border-neutral-800">PostgreSQL · Oracle · PL/SQL</span>
-        <span class="px-3 py-1 rounded-full border border-neutral-800">AWS · Docker · CI/CD</span>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <button type="button" class="btn-primary" (click)="scrollTo('projects')">
+          {{ i18n.t('hero.ctaProjects') }}
+          <app-icon name="arrow-right" />
+        </button>
+        <a class="btn-secondary" [href]="site.cv" target="_blank" rel="noopener noreferrer">
+          <app-icon name="download" />
+          {{ i18n.t('hero.ctaCv') }}
+        </a>
+        <a
+          class="icon-btn border border-line"
+          [href]="site.github"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="i18n.t('nav.github')"
+        >
+          <app-icon name="github" />
+        </a>
+        <a
+          class="icon-btn border border-line"
+          [href]="site.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="i18n.t('nav.linkedin')"
+        >
+          <app-icon name="linkedin" />
+        </a>
       </div>
     </div>
 
-    <div class="lg:col-span-4">
-      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6">
-        <div class="text-sm text-neutral-400">Recruiter-friendly</div>
-        <ul class="mt-3 space-y-2 text-neutral-200">
-          <li>• 13+ years in enterprise software</li>
-          <li>• US-based contractor experience</li>
-          <li>• Backend-heavy, performance-focused systems</li>
-          <li>• Remote: LATAM ↔ US overlap (GMT-4)</li>
+    <aside class="lg:col-span-4" aria-label="Highlights">
+      <div class="card p-6">
+        <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-brass">
+          {{ i18n.lang() === 'en' ? 'Currently' : 'Disponible' }}
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-paper-dim">
+          <li class="flex gap-3">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass"></span>
+            <span>{{ i18n.t('about.stats.years') }}</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass"></span>
+            <span>{{ i18n.lang() === 'en' ? 'US-based contractor experience' : 'Experiencia como contractor con equipos de EE. UU.' }}</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass"></span>
+            <span>{{ i18n.lang() === 'en' ? 'Backend-heavy, performance-focused systems' : 'Sistemas backend de alto rendimiento' }}</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass"></span>
+            <span>Remote · LATAM ↔ US · {{ site.timezone }}</span>
+          </li>
         </ul>
       </div>
-    </div>
+    </aside>
   </div>
 </section>

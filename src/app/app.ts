@@ -1,13 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SeoService } from './core/seo/seo.service';
-import { I18nService } from './core/i18n/i18n.service';
+import {Component, inject, OnInit} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {SeoService} from './core/seo/seo.service';
+import {I18nService} from './core/i18n/i18n.service';
+import {NavbarComponent} from './shared/navbar/navbar.component';
+import {FooterComponent} from './shared/footer/footer.component';
+import {BackToTopComponent} from './shared/back-to-top/back-to-top.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, BackToTopComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
 export class App implements OnInit {
   private readonly seo = inject(SeoService);

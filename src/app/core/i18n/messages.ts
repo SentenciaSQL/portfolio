@@ -2,23 +2,61 @@ export type Lang = 'en' | 'es';
 
 export const MESSAGES: Record<Lang, any> = {
   en: {
-    nav: { downloadCv: 'Download CV', contact: 'Contact' },
+    nav: {
+      home: 'Home',
+      about: 'About',
+      experience: 'Experience',
+      stack: 'Stack',
+      projects: 'Projects',
+      contact: 'Contact',
+      downloadCv: 'Download CV',
+      github: 'GitHub',
+      linkedin: 'LinkedIn',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
+    },
     hero: {
-      title: 'Senior Java / Spring Boot Engineer',
-      subtitle: 'Backend-focused | Scalable Systems | Remote LATAM → US',
+      kicker: 'Senior Full Stack Software Engineer',
       blurb:
-        '13+ years building enterprise systems in Java, Spring Boot, and Angular for e-commerce, LMS, and mission-critical platforms.',
-      ctaPrimary: 'Download CV',
-      ctaSecondary: 'View GitHub',
+        'Full Stack Software Engineer with 13+ years building enterprise applications, SaaS platforms, and scalable systems using Java, Spring Boot, Angular, React, .NET, and cloud technologies.',
+      ctaProjects: 'View projects',
+      ctaCv: 'Download CV',
     },
     about: {
       title: 'About',
-      body: 'Senior Software Engineer with 13+ years building backend-heavy systems using Java and Spring Boot. Experience across high-traffic e-commerce, LMS, and energy distribution systems, collaborating with US-based teams. Focused on clean architecture, performance, and long-term maintainability.',
+      body: 'Software Engineer specialized in Full Stack development — building enterprise applications, APIs, SaaS platforms, and distributed systems. I have worked with international teams and US-based clients across high-traffic e-commerce, LMS, and energy distribution. Focused on clean architecture, performance, and long-term maintainability.',
+      stats: {
+        years: '13+ years of experience',
+        focus: 'Full Stack Development',
+        location: 'Remote / LATAM',
+        english: 'English · Professional Working Proficiency',
+      },
     },
-    stack: { title: 'Tech Stack' },
+    stack: {
+      title: 'Tech Stack',
+      subtitle: 'A recruiter-friendly map of the tools I use to design, build, and ship production systems.',
+      categories: {
+        backend: 'Backend',
+        frontend: 'Frontend',
+        mobile: 'Mobile',
+        databases: 'Databases',
+        cloud: 'Cloud & DevOps',
+        architecture: 'Architecture',
+      },
+      architecture: [
+        'Layered backend architecture (Controllers, Services, Repositories)',
+        'RESTful APIs with JWT-based authentication and authorization',
+        'Clean Code and SOLID principles applied across backend services',
+        'Clear separation of concerns between backend and frontend',
+        'Database-driven design with optimized SQL and migrations',
+        'Production-oriented error handling and validation strategies',
+      ],
+    },
     projects: {
       title: 'Selected Projects',
+      subtitle: 'A focused set of full-stack platforms — APIs, web, and mobile.',
       viewAll: 'View all projects',
+      viewGithub: 'View all projects on GitHub',
       items: {
         cmms: {
           name: 'CMMS-Platform',
@@ -284,14 +322,37 @@ export const MESSAGES: Record<Lang, any> = {
       empty: 'No projects match the selected stack filters.',
       backHome: 'Home',
     },
-    experience: { title: 'Experience Snapshot' },
+    experience: {
+      title: 'Experience',
+      items: {
+        oneseven: {
+          summary: 'Full-stack work on a high-traffic SaaS audience builder platform.',
+        },
+        ceshop: {
+          summary: 'Senior systems engineering for high-traffic e-commerce and learning management platforms.',
+        },
+        indra: {
+          summary: 'Enterprise systems work focused on performance optimization and a Flutter migration.',
+        },
+        excellent: {
+          summary: 'Full-stack development across multiple enterprise client systems.',
+        },
+      },
+    },
     contact: {
-      title: 'Contact',
-      subtitle: 'Open to remote roles (LATAM → US time overlap).',
+      title: 'Let’s work together',
+      subtitle:
+        'Available for Senior Full Stack, Backend, and Frontend roles — especially remote work with international teams.',
+      cta: 'Contact me',
       email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
+      portfolio: 'Portfolio',
       timezone: 'Timezone',
+    },
+    common: {
+      backToTop: 'Back to top',
+      skipToContent: 'Skip to content',
     },
     secondaryTech: {
       title: 'Additional Technologies',
@@ -316,6 +377,7 @@ export const MESSAGES: Record<Lang, any> = {
       },
     },
     footer: {
+      role: 'Senior Full Stack Software Engineer',
       privacy: 'Privacy Policy',
     },
     privacy: {
@@ -361,23 +423,61 @@ export const MESSAGES: Record<Lang, any> = {
   },
 
   es: {
-    nav: { downloadCv: 'Descargar CV', contact: 'Contacto' },
+    nav: {
+      home: 'Inicio',
+      about: 'Sobre mí',
+      experience: 'Experiencia',
+      stack: 'Stack',
+      projects: 'Proyectos',
+      contact: 'Contacto',
+      downloadCv: 'Descargar CV',
+      github: 'GitHub',
+      linkedin: 'LinkedIn',
+      openMenu: 'Abrir menú',
+      closeMenu: 'Cerrar menú',
+    },
     hero: {
-      title: 'Ingeniero Senior – Java / Spring Boot',
-      subtitle: 'Backend-focused | Sistemas Escalables | Remoto LATAM → USA',
+      kicker: 'Senior Full Stack Software Engineer',
       blurb:
-        'Más de 13 años construyendo sistemas empresariales con Java, Spring Boot y Angular para e-commerce, LMS y plataformas críticas.',
-      ctaPrimary: 'Descargar CV',
-      ctaSecondary: 'Ver GitHub',
+        'Full Stack Software Engineer con más de 13 años de experiencia desarrollando aplicaciones empresariales, plataformas SaaS y soluciones escalables utilizando Java, Spring Boot, Angular, React, .NET y tecnologías Cloud.',
+      ctaProjects: 'Ver proyectos',
+      ctaCv: 'Descargar CV',
     },
     about: {
-      title: 'Acerca de mí',
-      body: 'Ingeniero de Software Senior con 13+ años desarrollando sistemas backend robustos con Java y Spring Boot. Experiencia en e-commerce de alto tráfico, LMS y sistemas críticos de distribución de energía, colaborando con equipos de EE. UU. Enfocado en arquitectura limpia, rendimiento y mantenibilidad.',
+      title: 'Sobre mí',
+      body: 'Software Engineer especializado en desarrollo Full Stack, con experiencia construyendo aplicaciones empresariales, APIs, plataformas SaaS y sistemas distribuidos. He trabajado con equipos internacionales y clientes de Estados Unidos en e-commerce de alto tráfico, LMS y distribución de energía. Enfocado en arquitectura limpia, rendimiento y mantenibilidad.',
+      stats: {
+        years: '13+ años de experiencia',
+        focus: 'Full Stack Development',
+        location: 'Remote / LATAM',
+        english: 'English · Professional Working Proficiency',
+      },
     },
-    stack: { title: 'Tecnologías' },
+    stack: {
+      title: 'Stack tecnológico',
+      subtitle: 'Un mapa fácil de escanear de las herramientas con las que diseño, construyo y publico sistemas en producción.',
+      categories: {
+        backend: 'Backend',
+        frontend: 'Frontend',
+        mobile: 'Mobile',
+        databases: 'Bases de datos',
+        cloud: 'Cloud & DevOps',
+        architecture: 'Arquitectura',
+      },
+      architecture: [
+        'Arquitectura backend en capas (Controladores, Servicios, Repositorios)',
+        'APIs REST con autenticación y autorización basada en JWT',
+        'Aplicación de principios Clean Code y SOLID',
+        'Separación clara de responsabilidades entre backend y frontend',
+        'Diseño orientado a base de datos con SQL optimizado y migraciones',
+        'Manejo de errores y validaciones orientadas a entornos productivos',
+      ],
+    },
     projects: {
-      title: 'Proyectos Destacados',
+      title: 'Proyectos destacados',
+      subtitle: 'Una selección de plataformas full-stack — APIs, web y móvil.',
       viewAll: 'Ver todos los proyectos',
+      viewGithub: 'Ver todos los proyectos en GitHub',
       items: {
         cmms: {
           name: 'CMMS-Platform',
@@ -641,14 +741,37 @@ export const MESSAGES: Record<Lang, any> = {
         'No hay proyectos que coincidan con los filtros de stack seleccionados.',
       backHome: 'Inicio',
     },
-    experience: { title: 'Resumen de Experiencia' },
+    experience: {
+      title: 'Experiencia',
+      items: {
+        oneseven: {
+          summary: 'Desarrollo full-stack en una plataforma SaaS de audience builder de alto tráfico.',
+        },
+        ceshop: {
+          summary: 'Ingeniería de sistemas senior para plataformas de e-commerce y LMS de alto tráfico.',
+        },
+        indra: {
+          summary: 'Sistemas empresariales con foco en optimización de rendimiento y una migración a Flutter.',
+        },
+        excellent: {
+          summary: 'Desarrollo full-stack para múltiples sistemas de clientes empresariales.',
+        },
+      },
+    },
     contact: {
-      title: 'Contacto',
-      subtitle: 'Disponible para roles remotos (solape horario LATAM → US).',
-      email: 'Correo',
+      title: '¿Trabajamos juntos?',
+      subtitle:
+        'Estoy disponible para oportunidades Senior Full Stack, Backend y Frontend, especialmente proyectos remotos para equipos internacionales.',
+      cta: 'Contactarme',
+      email: 'Email',
       linkedin: 'LinkedIn',
       github: 'GitHub',
-      timezone: 'Zona Horaria',
+      portfolio: 'Portafolio',
+      timezone: 'Zona horaria',
+    },
+    common: {
+      backToTop: 'Volver arriba',
+      skipToContent: 'Saltar al contenido',
     },
     secondaryTech: {
       title: 'Tecnologías Secundarias',
@@ -673,6 +796,7 @@ export const MESSAGES: Record<Lang, any> = {
       },
     },
     footer: {
+      role: 'Senior Full Stack Software Engineer',
       privacy: 'Política de privacidad',
     },
     privacy: {

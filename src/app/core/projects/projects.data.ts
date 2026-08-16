@@ -118,3 +118,5 @@ export const PROJECTS: ProjectMeta[] = [
 ];
 
 export const FEATURED_PROJECT_IDS = PROJECTS.filter((p) => p.featured).map((p) => p.id);
+
+export const HOME_PROJECT_IDS = ['blood', 'stockWise', 'cmms', 'comercia'] as const;
