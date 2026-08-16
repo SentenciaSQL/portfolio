@@ -14,13 +14,14 @@
       <span class="ml-2 hidden sm:inline">{{ site.name }}</span>
     </a>
 
-    <ul class="ml-6 hidden items-center lg:flex">
+    <ul class="ml-6 hidden items-center xl:flex">
       @for (item of navItems; track item.id) {
         <li>
           <button
             type="button"
             class="nav-link bg-transparent"
             [class.is-active]="isHome() && active() === item.id"
+            [attr.aria-current]="isHome() && active() === item.id ? 'location' : null"
             (click)="go(item.id)"
           >
             {{ i18n.t(item.labelKey) }}
@@ -67,7 +68,7 @@
       </button>
       <button
         type="button"
-        class="icon-btn lg:hidden"
+        class="icon-btn xl:hidden"
         (click)="toggleMenu()"
         [attr.aria-expanded]="menuOpen()"
         [attr.aria-label]="menuOpen() ? i18n.t('nav.closeMenu') : i18n.t('nav.openMenu')"
@@ -80,13 +81,13 @@
 
 @if (menuOpen()) {
   <div
-    class="fixed inset-0 z-40 bg-ink/70 lg:hidden"
+    class="fixed inset-0 z-40 bg-ink/70 xl:hidden"
     (click)="closeMenu()"
     aria-hidden="true"
   ></div>
 
   <aside
-    class="fixed inset-y-0 right-0 z-50 flex w-[min(20rem,88vw)] flex-col border-l border-line bg-ink-2 px-5 py-6 shadow-2xl lg:hidden"
+    class="fixed inset-y-0 right-0 z-50 flex w-[min(20rem,88vw)] flex-col border-l border-line bg-ink-2 px-5 py-6 shadow-2xl xl:hidden"
     role="dialog"
     aria-modal="true"
     [attr.aria-label]="i18n.t('nav.openMenu')"
@@ -110,6 +111,7 @@
             type="button"
             class="w-full rounded-lg px-3 py-3 text-left text-base text-paper-dim hover:bg-ink-3 hover:text-paper"
             [class.text-paper]="isHome() && active() === item.id"
+            [attr.aria-current]="isHome() && active() === item.id ? 'location' : null"
             (click)="go(item.id)"
           >
             {{ i18n.t(item.labelKey) }}

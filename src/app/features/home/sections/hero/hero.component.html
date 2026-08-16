@@ -23,40 +23,42 @@
         }
       </div>
 
-      <div class="mt-8 flex flex-wrap items-center gap-3">
-        <button type="button" class="btn-primary" (click)="scrollTo('projects')">
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+        <button type="button" class="btn-primary w-full sm:w-auto" (click)="scrollTo('projects')">
           {{ i18n.t('hero.ctaProjects') }}
           <app-icon name="arrow-right" />
         </button>
-        <a class="btn-secondary" [href]="site.cv" target="_blank" rel="noopener noreferrer">
+        <a class="btn-secondary w-full sm:w-auto" [href]="site.cv" target="_blank" rel="noopener noreferrer">
           <app-icon name="download" />
           {{ i18n.t('hero.ctaCv') }}
         </a>
-        <a
-          class="icon-btn border border-line"
-          [href]="site.github"
-          target="_blank"
-          rel="noopener noreferrer"
-          [attr.aria-label]="i18n.t('nav.github')"
-        >
-          <app-icon name="github" />
-        </a>
-        <a
-          class="icon-btn border border-line"
-          [href]="site.linkedin"
-          target="_blank"
-          rel="noopener noreferrer"
-          [attr.aria-label]="i18n.t('nav.linkedin')"
-        >
-          <app-icon name="linkedin" />
-        </a>
+        <div class="flex gap-3">
+          <a
+            class="icon-btn border border-line"
+            [href]="site.github"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="i18n.t('nav.github')"
+          >
+            <app-icon name="github" />
+          </a>
+          <a
+            class="icon-btn border border-line"
+            [href]="site.linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="i18n.t('nav.linkedin')"
+          >
+            <app-icon name="linkedin" />
+          </a>
+        </div>
       </div>
     </div>
 
     <aside class="lg:col-span-4" aria-label="Highlights">
       <div class="card p-6">
         <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-brass">
-          {{ i18n.lang() === 'en' ? 'Currently' : 'Disponible' }}
+          {{ i18n.t('hero.now') }}
         </p>
         <ul class="mt-4 space-y-3 text-sm text-paper-dim">
           <li class="flex gap-3">
@@ -65,11 +67,11 @@
           </li>
           <li class="flex gap-3">
             <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass"></span>
-            <span>{{ i18n.lang() === 'en' ? 'US-based contractor experience' : 'Experiencia como contractor con equipos de EE. UU.' }}</span>
+            <span>{{ i18n.t('hero.contractor') }}</span>
           </li>
           <li class="flex gap-3">
             <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass"></span>
-            <span>{{ i18n.lang() === 'en' ? 'Backend-heavy, performance-focused systems' : 'Sistemas backend de alto rendimiento' }}</span>
+            <span>{{ i18n.t('hero.systems') }}</span>
           </li>
           <li class="flex gap-3">
             <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass"></span>

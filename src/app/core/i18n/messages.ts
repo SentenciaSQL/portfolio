@@ -21,6 +21,9 @@ export const MESSAGES: Record<Lang, any> = {
         'Full Stack Software Engineer with 13+ years building enterprise applications, SaaS platforms, and scalable systems using Java, Spring Boot, Angular, React, .NET, and cloud technologies.',
       ctaProjects: 'View projects',
       ctaCv: 'Download CV',
+      now: 'Currently',
+      contractor: 'US-based contractor experience',
+      systems: 'Backend-heavy, performance-focused systems',
     },
     about: {
       title: 'About',
@@ -442,6 +445,9 @@ export const MESSAGES: Record<Lang, any> = {
         'Full Stack Software Engineer con más de 13 años de experiencia desarrollando aplicaciones empresariales, plataformas SaaS y soluciones escalables utilizando Java, Spring Boot, Angular, React, .NET y tecnologías Cloud.',
       ctaProjects: 'Ver proyectos',
       ctaCv: 'Descargar CV',
+      now: 'Disponible',
+      contractor: 'Experiencia como contractor con equipos de EE. UU.',
+      systems: 'Sistemas backend de alto rendimiento',
     },
     about: {
       title: 'Sobre mí',
