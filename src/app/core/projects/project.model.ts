@@ -1,6 +1,12 @@
-import {StackFilter} from './stacks';
+import { StackFilter } from './stacks';
 
-export type ProjectLinkKind = 'api' | 'ui' | 'repo' | 'admin';
+export type ProjectLinkKind =
+  | 'api'
+  | 'ui'
+  | 'repo'
+  | 'admin'
+  | 'android'
+  | 'ios';
 
 export interface ProjectLink {
   kind: ProjectLinkKind;

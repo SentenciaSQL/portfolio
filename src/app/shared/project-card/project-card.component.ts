@@ -1,7 +1,10 @@
-import {Component, computed, inject, input} from '@angular/core';
-import {I18nService} from '../../core/i18n/i18n.service';
-import {ProjectMeta} from '../../core/projects/project.model';
-import {IconComponent} from '../icon/icon.component';
+import { Component, computed, inject, input } from '@angular/core';
+import { I18nService } from '../../core/i18n/i18n.service';
+import {
+  ProjectLinkKind,
+  ProjectMeta,
+} from '../../core/projects/project.model';
+import { IconComponent, IconName } from '../icon/icon.component';
 
 @Component({
   standalone: true,
@@ -23,7 +26,10 @@ export class ProjectCardComponent {
   badges = computed(() => {
     const stack = this.content()?.stack as string | undefined;
     if (stack) {
-      return stack.split('·').map((item: string) => item.trim()).filter(Boolean);
+      return stack
+        .split('·')
+        .map((item: string) => item.trim())
+        .filter(Boolean);
     }
     return this.project().stacks;
   });
@@ -36,5 +42,15 @@ export class ProjectCardComponent {
   linkLabel(kind: string): string {
     const links = this.content()?.links;
     return links?.[kind] ?? kind;
+  }
+
+  linkIcon(kind: ProjectLinkKind): IconName {
+    if (kind === 'android' || kind === 'ios') {
+      return kind;
+    }
+    if (kind === 'admin') {
+      return 'globe';
+    }
+    return 'github';
   }
 }

@@ -1,4 +1,4 @@
-import {ProjectMeta} from './project.model';
+import { ProjectMeta } from './project.model';
 
 export const PROJECTS: ProjectMeta[] = [
   {
@@ -6,7 +6,7 @@ export const PROJECTS: ProjectMeta[] = [
     featured: true,
     stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/CMMS-Platform'},
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/CMMS-Platform' },
     ],
   },
   {
@@ -14,7 +14,10 @@ export const PROJECTS: ProjectMeta[] = [
     featured: true,
     stacks: ['Java', 'Spring Boot', 'Angular'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/Comercia-multi-tenant'},
+      {
+        kind: 'repo',
+        url: 'https://github.com/SentenciaSQL/Comercia-multi-tenant',
+      },
     ],
   },
   {
@@ -22,23 +25,29 @@ export const PROJECTS: ProjectMeta[] = [
     featured: true,
     stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/BloodConnectRD'},
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/BloodConnectRD' },
+      {
+        kind: 'admin',
+        url: 'https://bloodconnectrd.com.do/',
+      },
     ],
   },
   {
     id: 'spa',
     stacks: ['Python', 'Angular'],
     links: [
-      {kind: 'api', url: 'https://github.com/SentenciaSQL/Beauty-Spa-API'},
-      {kind: 'ui', url: 'https://github.com/SentenciaSQL/Beauty-Spa-Frontend'},
+      { kind: 'api', url: 'https://github.com/SentenciaSQL/Beauty-Spa-API' },
+      {
+        kind: 'ui',
+        url: 'https://github.com/SentenciaSQL/Beauty-Spa-Frontend',
+      },
     ],
   },
   {
     id: 'stockWise',
-    featured: true,
     stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/StockWise-App'},
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/StockWise-App' },
     ],
   },
   {
@@ -46,77 +55,107 @@ export const PROJECTS: ProjectMeta[] = [
     featured: true,
     stacks: ['Flutter', 'Dart', 'C#', '.NET'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/FinTrack'},
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/FinTrack' },
+      {
+        kind: 'android',
+        url: 'https://play.google.com/store/apps/details?id=com.sentenciasql.fintrack',
+      },
     ],
   },
   {
     id: 'expenseTracker',
     stacks: ['Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/expense-tracker'},
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/expense-tracker' },
     ],
   },
   {
     id: 'pagatodo',
     stacks: ['Angular'],
     links: [
-      {kind: 'admin', url: 'https://github.com/SentenciaSQL/pagatodo-admin'},
-      {kind: 'ui', url: 'https://github.com/SentenciaSQL/pagatodo'},
+      { kind: 'admin', url: 'https://github.com/SentenciaSQL/pagatodo-admin' },
+      { kind: 'ui', url: 'https://github.com/SentenciaSQL/pagatodo' },
     ],
   },
   {
     id: 'tesloShop',
-    featured: true,
     stacks: ['React', 'NestJS'],
     links: [
-      {kind: 'api', url: 'https://github.com/SentenciaSQL/nest-urbanwear-shop-api'},
-      {kind: 'ui', url: 'https://github.com/SentenciaSQL/urbanwear-shop-fontend'},
+      {
+        kind: 'api',
+        url: 'https://github.com/SentenciaSQL/nest-urbanwear-shop-api',
+      },
+      {
+        kind: 'ui',
+        url: 'https://github.com/SentenciaSQL/urbanwear-shop-fontend',
+      },
     ],
   },
   {
     id: 'pokedexKotlin',
     stacks: ['Kotlin', 'Android'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/Pokedex-Kotlin'},
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/Pokedex-Kotlin' },
     ],
   },
   {
     id: 'pokeFlu',
     stacks: ['Flutter', 'Dart', 'Android'],
-    links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/PokeFlu'},
-    ],
+    links: [{ kind: 'repo', url: 'https://github.com/SentenciaSQL/PokeFlu' }],
   },
   {
     id: 'learnKids',
     stacks: ['Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/learn_kids_app'},
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/learn_kids_app' },
     ],
   },
   {
     id: 'taskFlow',
     stacks: ['C#', '.NET'],
-    links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/TaskFlow'},
-    ],
+    links: [{ kind: 'repo', url: 'https://github.com/SentenciaSQL/TaskFlow' }],
   },
   {
     id: 'adminDashboardFlutter',
     stacks: ['Flutter', 'Dart'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/admin_dashboard_flutter'},
+      {
+        kind: 'repo',
+        url: 'https://github.com/SentenciaSQL/admin_dashboard_flutter',
+      },
     ],
   },
   {
     id: 'springChat',
     stacks: ['Java', 'Spring Boot'],
     links: [
-      {kind: 'repo', url: 'https://github.com/SentenciaSQL/spring-boot-backend-chat'},
+      {
+        kind: 'repo',
+        url: 'https://github.com/SentenciaSQL/spring-boot-backend-chat',
+      },
+    ],
+  },
+  {
+    id: 'lunaveta',
+    featured: true,
+    stacks: ['Java', 'Spring Boot', 'Angular', 'Flutter', 'Dart'],
+    links: [
+      { kind: 'repo', url: 'https://github.com/SentenciaSQL/Vetora' },
+      {
+        kind: 'admin',
+        url: 'https://lunaveta.com/',
+      },
     ],
   },
 ];
 
-export const FEATURED_PROJECT_IDS = PROJECTS.filter((p) => p.featured).map((p) => p.id);
+export const FEATURED_PROJECT_IDS = PROJECTS.filter((p) => p.featured).map(
+  (p) => p.id,
+);
 
-export const HOME_PROJECT_IDS = ['blood', 'stockWise', 'cmms', 'comercia'] as const;
+export const HOME_PROJECT_IDS = [
+  'blood',
+  'finTrack',
+  'lunaveta',
+  'comercia',
+] as const;

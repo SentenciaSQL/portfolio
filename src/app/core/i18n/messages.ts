@@ -18,7 +18,7 @@ export const MESSAGES: Record<Lang, any> = {
     hero: {
       kicker: 'Senior Full Stack Software Engineer',
       blurb:
-        'Full Stack Software Engineer with 13+ years building enterprise applications, SaaS platforms, and scalable systems using Java, Spring Boot, Angular, React, .NET, and cloud technologies.',
+        'Full Stack Software Engineer with 13+ years building enterprise applications, SaaS platforms, mobile applications and scalable systems using Java, Spring Boot, Angular, React, .NET, Flutter, and cloud technologies.',
       ctaProjects: 'View projects',
       ctaCv: 'Download CV',
       now: 'Currently',
@@ -37,7 +37,8 @@ export const MESSAGES: Record<Lang, any> = {
     },
     stack: {
       title: 'Tech Stack',
-      subtitle: 'A recruiter-friendly map of the tools I use to design, build, and ship production systems.',
+      subtitle:
+        'A recruiter-friendly map of the tools I use to design, build, and ship production systems.',
       categories: {
         backend: 'Backend',
         frontend: 'Frontend',
@@ -58,7 +59,8 @@ export const MESSAGES: Record<Lang, any> = {
     },
     projects: {
       title: 'Selected Projects',
-      subtitle: 'A focused set of full-stack platforms — APIs, web, and mobile.',
+      subtitle:
+        'A focused set of full-stack platforms — APIs, web, and mobile.',
       viewAll: 'View all projects',
       viewGithub: 'View all projects on GitHub',
       items: {
@@ -267,6 +269,25 @@ export const MESSAGES: Record<Lang, any> = {
           },
         },
 
+        lunaveta: {
+          name: 'LunaVeta',
+          subtitle: 'Veterinary Practice Management Platform',
+          stack: 'Flutter · Dart · Spring Boot · Angular · PostgreSQL',
+          summary:
+            'A veterinary management SaaS platform designed to help clinics manage patients, medical records, appointments, and daily operations through a modern, centralized digital solution.',
+          bullets: [
+            'Development of a cross-platform mobile application using Flutter.',
+            'Integration with REST APIs built with Java and Spring Boot.',
+            'Management of patients, pets, appointments, and veterinary medical records.',
+            'Multi-tenant architecture with customizable branding for each clinic.',
+            'Modern user interface with multilingual support and regional settings.',
+            'Focus on scalability, usability, and operational efficiency.',
+          ],
+          links: {
+            repo: 'Repository',
+          },
+        },
+
         taskFlow: {
           name: 'TaskFlow',
           subtitle: 'Task Management Backend',
@@ -330,16 +351,20 @@ export const MESSAGES: Record<Lang, any> = {
       title: 'Experience',
       items: {
         oneseven: {
-          summary: 'Full-stack work on a high-traffic SaaS audience builder platform.',
+          summary:
+            'Full-stack work on a high-traffic SaaS audience builder platform.',
         },
         ceshop: {
-          summary: 'Senior systems engineering for high-traffic e-commerce and learning management platforms.',
+          summary:
+            'Senior systems engineering for high-traffic e-commerce and learning management platforms.',
         },
         indra: {
-          summary: 'Enterprise systems work focused on performance optimization and a Flutter migration.',
+          summary:
+            'Enterprise systems work focused on performance optimization and a Flutter migration.',
         },
         excellent: {
-          summary: 'Full-stack development across multiple enterprise client systems.',
+          summary:
+            'Full-stack development across multiple enterprise client systems.',
         },
       },
     },
@@ -394,33 +419,27 @@ export const MESSAGES: Record<Lang, any> = {
       sections: [
         {
           title: '1. Information I collect',
-          body:
-            'This Site does not require accounts and does not include contact forms that store submissions on a server.\n\nIf you email me or reach out through LinkedIn or GitHub, I receive the information you choose to share in that conversation.',
+          body: 'This Site does not require accounts and does not include contact forms that store submissions on a server.\n\nIf you email me or reach out through LinkedIn or GitHub, I receive the information you choose to share in that conversation.',
         },
         {
           title: '2. Local preferences',
-          body:
-            'The Site stores your language preference (English or Spanish) in your browser’s localStorage so the interface can remember your choice on later visits. This preference stays on your device and is not sent to a backend database.',
+          body: 'The Site stores your language preference (English or Spanish) in your browser’s localStorage so the interface can remember your choice on later visits. This preference stays on your device and is not sent to a backend database.',
         },
         {
           title: '3. Analytics and cookies',
-          body:
-            'The Site may use Google Analytics (or similar tools) to understand aggregate traffic, such as pages viewed and approximate location. These tools may set cookies or use similar technologies.\n\nYou can control cookies through your browser settings. Blocking cookies may limit analytics measurement but should not prevent browsing the portfolio content.',
+          body: 'The Site may use Google Analytics (or similar tools) to understand aggregate traffic, such as pages viewed and approximate location. These tools may set cookies or use similar technologies.\n\nYou can control cookies through your browser settings. Blocking cookies may limit analytics measurement but should not prevent browsing the portfolio content.',
         },
         {
           title: '4. Third-party links',
-          body:
-            'The Site links to external services such as GitHub, LinkedIn, and project repositories. Those services have their own privacy policies, and I am not responsible for their practices.',
+          body: 'The Site links to external services such as GitHub, LinkedIn, and project repositories. Those services have their own privacy policies, and I am not responsible for their practices.',
         },
         {
           title: '5. Data sharing',
-          body:
-            'I do not sell personal information. Analytics providers may process usage data on my behalf under their terms. Contact messages you send are used only to respond to your inquiry.',
+          body: 'I do not sell personal information. Analytics providers may process usage data on my behalf under their terms. Contact messages you send are used only to respond to your inquiry.',
         },
         {
           title: '6. Changes',
-          body:
-            'I may update this privacy policy from time to time. The “Last updated” date at the top of this page reflects the latest revision.',
+          body: 'I may update this privacy policy from time to time. The “Last updated” date at the top of this page reflects the latest revision.',
         },
       ],
     },
@@ -443,7 +462,7 @@ export const MESSAGES: Record<Lang, any> = {
     hero: {
       kicker: 'Senior Full Stack Software Engineer',
       blurb:
-        'Full Stack Software Engineer con más de 13 años de experiencia desarrollando aplicaciones empresariales, plataformas SaaS y soluciones escalables utilizando Java, Spring Boot, Angular, React, .NET y tecnologías Cloud.',
+        'Full Stack Software Engineer con más de 13 años de experiencia desarrollando aplicaciones empresariales, plataformas SaaS, aplicaciones móviles y soluciones escalables utilizando Java, Spring Boot, Angular, React, .NET, Flutter y tecnologías Cloud.',
       ctaProjects: 'Ver proyectos',
       ctaCv: 'Descargar CV',
       now: 'Disponible',
@@ -462,7 +481,8 @@ export const MESSAGES: Record<Lang, any> = {
     },
     stack: {
       title: 'Stack tecnológico',
-      subtitle: 'Un mapa fácil de escanear de las herramientas con las que diseño, construyo y publico sistemas en producción.',
+      subtitle:
+        'Un mapa fácil de escanear de las herramientas con las que diseño, construyo y publico sistemas en producción.',
       categories: {
         backend: 'Backend',
         frontend: 'Frontend',
@@ -689,6 +709,25 @@ export const MESSAGES: Record<Lang, any> = {
           },
         },
 
+        lunaveta: {
+          name: 'LunaVeta',
+          subtitle: 'Plataforma de Gestión Veterinaria',
+          stack: 'Flutter · Dart · Spring Boot · Angular · PostgreSQL',
+          summary:
+            'Plataforma SaaS de gestión veterinaria diseñada para ayudar a clínicas a administrar pacientes, historiales clínicos, citas y operaciones diarias desde una solución digital moderna y centralizada.',
+          bullets: [
+            'Desarrollo de una aplicación móvil multiplataforma con Flutter.',
+            'Integración con APIs REST desarrolladas con Java y Spring Boot.',
+            'Gestión de pacientes, mascotas, citas e historiales veterinarios.',
+            'Arquitectura multi-tenant con personalización para cada clínica.',
+            'Interfaz moderna con soporte multilingüe y configuración regional.',
+            'Enfoque en escalabilidad, usabilidad y eficiencia operativa.',
+          ],
+          links: {
+            repo: 'Repositorio',
+          },
+        },
+
         taskFlow: {
           name: 'TaskFlow',
           subtitle: 'Backend de Gestión de Tareas',
@@ -753,16 +792,20 @@ export const MESSAGES: Record<Lang, any> = {
       title: 'Experiencia',
       items: {
         oneseven: {
-          summary: 'Desarrollo full-stack en una plataforma SaaS de audience builder de alto tráfico.',
+          summary:
+            'Desarrollo full-stack en una plataforma SaaS de audience builder de alto tráfico.',
         },
         ceshop: {
-          summary: 'Ingeniería de sistemas senior para plataformas de e-commerce y LMS de alto tráfico.',
+          summary:
+            'Ingeniería de sistemas senior para plataformas de e-commerce y LMS de alto tráfico.',
         },
         indra: {
-          summary: 'Sistemas empresariales con foco en optimización de rendimiento y una migración a Flutter.',
+          summary:
+            'Sistemas empresariales con foco en optimización de rendimiento y una migración a Flutter.',
         },
         excellent: {
-          summary: 'Desarrollo full-stack para múltiples sistemas de clientes empresariales.',
+          summary:
+            'Desarrollo full-stack para múltiples sistemas de clientes empresariales.',
         },
       },
     },
@@ -817,33 +860,27 @@ export const MESSAGES: Record<Lang, any> = {
       sections: [
         {
           title: '1. Información que recopilo',
-          body:
-            'Este Sitio no requiere cuentas y no incluye formularios de contacto que almacenen envíos en un servidor.\n\nSi me escribes por correo o me contactas por LinkedIn o GitHub, recibo la información que eliges compartir en esa conversación.',
+          body: 'Este Sitio no requiere cuentas y no incluye formularios de contacto que almacenen envíos en un servidor.\n\nSi me escribes por correo o me contactas por LinkedIn o GitHub, recibo la información que eliges compartir en esa conversación.',
         },
         {
           title: '2. Preferencias locales',
-          body:
-            'El Sitio guarda tu preferencia de idioma (inglés o español) en el localStorage del navegador para recordar tu elección en visitas posteriores. Esta preferencia permanece en tu dispositivo y no se envía a una base de datos backend.',
+          body: 'El Sitio guarda tu preferencia de idioma (inglés o español) en el localStorage del navegador para recordar tu elección en visitas posteriores. Esta preferencia permanece en tu dispositivo y no se envía a una base de datos backend.',
         },
         {
           title: '3. Analítica y cookies',
-          body:
-            'El Sitio puede usar Google Analytics (o herramientas similares) para entender el tráfico agregado, como páginas vistas y ubicación aproximada. Estas herramientas pueden establecer cookies o usar tecnologías similares.\n\nPuedes controlar las cookies desde la configuración de tu navegador. Bloquearlas puede limitar la medición analítica, pero no debería impedir navegar el contenido del portafolio.',
+          body: 'El Sitio puede usar Google Analytics (o herramientas similares) para entender el tráfico agregado, como páginas vistas y ubicación aproximada. Estas herramientas pueden establecer cookies o usar tecnologías similares.\n\nPuedes controlar las cookies desde la configuración de tu navegador. Bloquearlas puede limitar la medición analítica, pero no debería impedir navegar el contenido del portafolio.',
         },
         {
           title: '4. Enlaces de terceros',
-          body:
-            'El Sitio enlaza a servicios externos como GitHub, LinkedIn y repositorios de proyectos. Esos servicios tienen sus propias políticas de privacidad y no soy responsable de sus prácticas.',
+          body: 'El Sitio enlaza a servicios externos como GitHub, LinkedIn y repositorios de proyectos. Esos servicios tienen sus propias políticas de privacidad y no soy responsable de sus prácticas.',
         },
         {
           title: '5. Compartición de datos',
-          body:
-            'No vendo información personal. Los proveedores de analítica pueden procesar datos de uso en mi nombre según sus términos. Los mensajes de contacto que envíes se usan solo para responder a tu consulta.',
+          body: 'No vendo información personal. Los proveedores de analítica pueden procesar datos de uso en mi nombre según sus términos. Los mensajes de contacto que envíes se usan solo para responder a tu consulta.',
         },
         {
           title: '6. Cambios',
-          body:
-            'Puedo actualizar esta política de privacidad ocasionalmente. La fecha de “Última actualización” al inicio de esta página refleja la revisión más reciente.',
+          body: 'Puedo actualizar esta política de privacidad ocasionalmente. La fecha de “Última actualización” al inicio de esta página refleja la revisión más reciente.',
         },
       ],
     },
