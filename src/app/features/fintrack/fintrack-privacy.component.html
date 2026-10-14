@@ -1,0 +1,50 @@
+<article class="mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-20">
+  <header class="border-b border-[#dce7e3] pb-8">
+    <p class="text-xs font-semibold tracking-[0.14em] text-[#0d766e]">
+      FINTRACK
+    </p>
+    <h1
+      class="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+    >
+      {{ copy().title }}
+    </h1>
+    <p class="mt-3 text-sm text-[#64716d]">{{ copy().updated }}</p>
+    <p class="mt-6 text-lg leading-8 text-[#53635e]">{{ copy().intro }}</p>
+  </header>
+
+  <div class="divide-y divide-[#dce7e3]">
+    @for (section of copy().sections; track section.title) {
+      <section class="py-7">
+        <h2 class="text-xl font-semibold tracking-tight">
+          {{ section.title }}
+        </h2>
+        <p class="mt-3 whitespace-pre-line leading-7 text-[#53635e]">
+          {{ section.body }}
+        </p>
+        @if (
+          section.title ===
+          (i18n.lang() === "es"
+            ? "Almacenamiento y servicios"
+            : "Storage and services")
+        ) {
+          <a
+            class="mt-3 inline-flex text-sm font-medium text-[#0d766e] underline decoration-[#8ec9bf] underline-offset-4 hover:text-[#095e58]"
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ copy().googlePolicy }}</a
+          >
+        }
+      </section>
+    }
+  </div>
+
+  <p class="mt-8 text-sm text-[#53635e]">
+    {{ copy().contact }}:
+    <a
+      class="font-medium text-[#0d766e] underline decoration-[#8ec9bf] underline-offset-4 hover:text-[#095e58]"
+      [href]="'mailto:' + email"
+      >{{ email }}</a
+    >
+  </p>
+</article>

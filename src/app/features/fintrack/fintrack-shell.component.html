@@ -1,0 +1,104 @@
+<div class="min-h-screen bg-[#f3f7f5] text-[#192724]">
+  <header class="border-b border-[#dce7e3]">
+    <div
+      class="mx-auto flex min-h-[76px] max-w-6xl items-center justify-between gap-4 px-5 sm:px-8"
+    >
+      <a
+        routerLink="/fintrack"
+        class="flex items-center gap-3 text-inherit no-underline"
+        aria-label="FinTrack"
+      >
+        <span
+          class="grid h-10 w-10 place-items-center rounded-xl bg-[#0d766e] text-white"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+            class="h-6 w-6"
+          >
+            <path
+              d="M5 18V6h13M5 12h8"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M14 18v-4h2v4m2 0v-7h2v7"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <span class="text-lg font-semibold tracking-tight">FinTrack</span>
+      </a>
+
+      <div class="flex items-center gap-3 sm:gap-6">
+        <nav
+          class="flex items-center gap-4 text-sm sm:gap-6"
+          aria-label="FinTrack"
+        >
+          <a
+            routerLink="/fintrack"
+            routerLinkActive="!text-[#0d766e]"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="text-[#52615c] no-underline transition-colors hover:text-[#0d766e]"
+            >{{ copy[i18n.lang()].overview }}</a
+          >
+          <a
+            routerLink="/fintrack/support"
+            routerLinkActive="!text-[#0d766e]"
+            class="text-[#52615c] no-underline transition-colors hover:text-[#0d766e]"
+            >{{ copy[i18n.lang()].support }}</a
+          >
+        </nav>
+
+        <div
+          class="flex rounded-full border border-[#b8c9c3] p-1 text-xs font-medium"
+          role="group"
+          [attr.aria-label]="copy[i18n.lang()].language"
+        >
+          <button
+            type="button"
+            (click)="i18n.setLang('es')"
+            [attr.aria-pressed]="i18n.lang() === 'es'"
+            [class.bg-[#d4efea]]="i18n.lang() === 'es'"
+            class="rounded-full px-2.5 py-1.5 text-[#33443f] transition-colors"
+          >
+            ES
+          </button>
+          <button
+            type="button"
+            (click)="i18n.setLang('en')"
+            [attr.aria-pressed]="i18n.lang() === 'en'"
+            [class.bg-[#d4efea]]="i18n.lang() === 'en'"
+            class="rounded-full px-2.5 py-1.5 text-[#33443f] transition-colors"
+          >
+            EN
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <router-outlet />
+  </main>
+
+  <footer class="border-t border-[#dce7e3]">
+    <div
+      class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-7 text-sm text-[#64716d] sm:flex-row sm:items-center sm:justify-between sm:px-8"
+    >
+      <span>FinTrack</span>
+      <span>{{ copy[i18n.lang()].footer }}</span>
+      <a
+        routerLink="/fintrack/privacy"
+        class="font-medium text-[#0d766e] no-underline hover:underline"
+        >{{ copy[i18n.lang()].privacy }}</a
+      >
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,150 @@
+<div class="overflow-hidden">
+  <section
+    class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-24"
+  >
+    <div class="max-w-xl">
+      <p class="text-xs font-semibold tracking-[0.14em] text-[#0d766e]">
+        {{ copy().eyebrow }}
+      </p>
+      <h1
+        class="mt-5 max-w-lg text-5xl font-semibold leading-[1.06] tracking-tight sm:text-6xl"
+      >
+        {{ copy().title }}
+      </h1>
+      <p class="mt-6 max-w-lg text-lg leading-8 text-[#53635e]">
+        {{ copy().intro }}
+      </p>
+      <a
+        routerLink="/fintrack/support"
+        class="mt-8 inline-flex items-center gap-2 font-semibold text-[#0d766e] underline decoration-[#8ec9bf] underline-offset-4 hover:text-[#095e58]"
+      >
+        {{ copy().support }} <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+
+    <div
+      class="relative mx-auto w-full max-w-140"
+      aria-label="FinTrack dashboard preview"
+    >
+      <div
+        class="relative border border-[#dce7e3] bg-white p-6 shadow-[0_24px_70px_-48px_rgba(16,65,57,0.45)] sm:p-8"
+      >
+        <div
+          class="flex items-center justify-between gap-3 border-b border-[#e8efec] pb-5"
+        >
+          <div class="flex items-center gap-3">
+            <span
+              class="grid h-9 w-9 place-items-center rounded-lg bg-[#e2f4ef] text-[#0d766e]"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <path
+                  d="M4 18V6h13M4 12h9m-5 6v-4h2v4m3 0v-7h2v7m3 0V9h2v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="font-semibold">FinTrack</span>
+          </div>
+          <span class="text-sm text-[#71807a]">{{ copy().preview }}</span>
+        </div>
+
+        <div class="mt-6 rounded-lg bg-[#0d766e] px-5 py-5 text-white sm:px-6">
+          <p class="text-sm text-white/75">{{ copy().balance }}</p>
+          <p class="mt-1 text-3xl font-semibold tracking-tight sm:text-4xl">
+            RD$109,890.00
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 py-6">
+          <div>
+            <p class="text-sm text-[#71807a]">{{ copy().income }}</p>
+            <p class="mt-1 text-xl font-semibold text-[#0aae7e]">RD$125,000</p>
+          </div>
+          <div>
+            <p class="text-sm text-[#71807a]">{{ copy().expenses }}</p>
+            <p class="mt-1 text-xl font-semibold text-[#f04b4f]">RD$15,110</p>
+          </div>
+        </div>
+
+        <div class="border-t border-[#e8efec] pt-5">
+          <div class="flex items-center justify-between gap-4">
+            <p class="font-medium">{{ copy().chart }}</p>
+            <span class="text-sm text-[#71807a]">{{ copy().month }}</span>
+          </div>
+          <div
+            class="mt-5 flex h-28 items-end justify-around gap-3"
+            aria-hidden="true"
+          >
+            <span class="h-[35%] w-5 rounded-t bg-[#b7e6da]"></span>
+            <span class="h-[50%] w-5 rounded-t bg-[#8bd7c4]"></span>
+            <span class="h-[42%] w-5 rounded-t bg-[#b7e6da]"></span>
+            <span class="h-[68%] w-5 rounded-t bg-[#48c6a5]"></span>
+            <span class="h-[56%] w-5 rounded-t bg-[#8bd7c4]"></span>
+            <span class="h-[92%] w-5 rounded-t bg-[#0aae7e]"></span>
+          </div>
+          <div
+            class="mt-2 flex justify-between text-[11px] text-[#82908b]"
+            aria-hidden="true"
+          >
+            <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span
+            ><span>Sep</span><span>Oct</span>
+          </div>
+        </div>
+
+        <div
+          class="mt-5 flex items-center justify-between gap-4 border-t border-[#e8efec] pt-4"
+        >
+          <span class="text-sm text-[#53635e]">{{ copy().budget }}</span>
+          <span class="font-semibold text-[#0d766e]">60%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-[#dce7e3] bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+          {{ copy().sectionTitle }}
+        </h2>
+        <p class="mt-4 text-lg leading-8 text-[#53635e]">
+          {{ copy().sectionIntro }}
+        </p>
+      </div>
+      <div class="mt-10 grid gap-8 sm:grid-cols-3 sm:gap-10">
+        @for (
+          feature of copy().features;
+          track feature.title;
+          let index = $index
+        ) {
+          <article class="border-t-2 border-[#a9d9cf] pt-5">
+            <p class="font-mono text-xs text-[#0d766e]">0{{ index + 1 }}</p>
+            <h3 class="mt-3 text-xl font-semibold">{{ feature.title }}</h3>
+            <p class="mt-2 leading-7 text-[#53635e]">{{ feature.body }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-14 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-16"
+  >
+    <div>
+      <h2 class="text-2xl font-semibold tracking-tight">
+        {{ copy().closingTitle }}
+      </h2>
+      <p class="mt-2 text-[#53635e]">{{ copy().closingBody }}</p>
+    </div>
+    <a
+      routerLink="/fintrack/support"
+      class="inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-lg bg-[#0d766e] px-5 font-semibold text-white no-underline transition-colors hover:bg-[#095e58] sm:self-auto"
+    >
+      {{ copy().closingLink }} <span aria-hidden="true">&rarr;</span>
+    </a>
+  </section>
+</div>

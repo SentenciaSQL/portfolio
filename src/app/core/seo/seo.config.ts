@@ -36,10 +36,39 @@ export const PRIVACY_SEO: PageSeo = {
   keywords: `${DEFAULT_KEYWORDS}, Privacy Policy`,
 };
 
+export const FINTRACK_SEO: PageSeo = {
+  path: '/fintrack',
+  title: 'FinTrack | Personal Finance, in Balance',
+  description:
+    'Track income, expenses, budgets, and financial activity with FinTrack, a clear personal finance app.',
+  keywords:
+    'FinTrack, personal finance, budget tracker, income, expenses, finance app',
+};
+
+export const FINTRACK_SUPPORT_SEO: PageSeo = {
+  path: '/fintrack/support',
+  title: 'FinTrack Support | Help Center',
+  description:
+    'Get help with FinTrack, find answers to common questions, or contact the support team.',
+  keywords: 'FinTrack support, help center, finance app support, contact',
+};
+
+export const FINTRACK_PRIVACY_SEO: PageSeo = {
+  path: '/fintrack/privacy',
+  title: 'FinTrack Privacy Policy',
+  description:
+    'Learn how FinTrack processes account information and financial records, and how to request deletion of your data.',
+  keywords:
+    'FinTrack privacy policy, financial data, account data, data deletion',
+};
+
 export const ROUTE_SEO: Record<string, PageSeo> = {
   '': HOME_SEO,
   projects: PROJECTS_SEO,
   privacy: PRIVACY_SEO,
+  fintrack: FINTRACK_SEO,
+  'fintrack/support': FINTRACK_SUPPORT_SEO,
+  'fintrack/privacy': FINTRACK_PRIVACY_SEO,
 };
 
 export const PERSON_JSON_LD = {

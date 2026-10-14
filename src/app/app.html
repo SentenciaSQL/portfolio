@@ -1,8 +1,16 @@
-<div class="min-h-screen bg-ink text-paper">
+<div
+  [class.min-h-screen]="!isFintrack()"
+  [class.bg-ink]="!isFintrack()"
+  [class.text-paper]="!isFintrack()"
+>
+  @if (!isFintrack()) {
   <app-navbar />
+  }
   <main id="main" tabindex="-1">
     <router-outlet />
   </main>
+  @if (!isFintrack()) {
   <app-footer />
   <app-back-to-top />
+  }
 </div>

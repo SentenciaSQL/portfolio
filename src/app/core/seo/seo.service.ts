@@ -1,9 +1,9 @@
-import {DOCUMENT} from '@angular/common';
-import {DestroyRef, inject, Injectable} from '@angular/core';
-import {Meta, Title} from '@angular/platform-browser';
-import {NavigationEnd, Router} from '@angular/router';
-import {filter} from 'rxjs';
-import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import { DOCUMENT } from '@angular/common';
+import { DestroyRef, inject, Injectable } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
   DEFAULT_KEYWORDS,
   DEFAULT_OG_IMAGE,
@@ -32,11 +32,16 @@ export class SeoService {
 
     this.router.events
       .pipe(
-        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd,
+        ),
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe((event) => {
-        const path = event.urlAfterRedirects.split('?')[0].replace(/^\//, '');
+        const path = event.urlAfterRedirects
+          .split(/[?#]/, 1)[0]
+          .replace(/^\//, '')
+          .replace(/\/$/, '');
         const page = ROUTE_SEO[path] ?? HOME_SEO;
         this.apply(page);
       });
@@ -59,7 +64,11 @@ export class SeoService {
     this.updateTag('property', 'og:description', page.description);
     this.updateTag('property', 'og:url', url);
     this.updateTag('property', 'og:image', DEFAULT_OG_IMAGE);
-    this.updateTag('property', 'og:image:alt', `${SITE_NAME} — Senior Full Stack Software Engineer`);
+    this.updateTag(
+      'property',
+      'og:image:alt',
+      `${SITE_NAME} — Senior Full Stack Software Engineer`,
+    );
     this.updateTag('property', 'og:locale', 'en_US');
     this.updateTag('property', 'og:locale:alternate', 'es_DO');
 
@@ -82,14 +91,16 @@ export class SeoService {
   ): void {
     const selector = `${attr}="${key}"`;
     if (this.meta.getTag(selector)) {
-      this.meta.updateTag({[attr]: key, content});
+      this.meta.updateTag({ [attr]: key, content });
       return;
     }
-    this.meta.addTag({[attr]: key, content});
+    this.meta.addTag({ [attr]: key, content });
   }
 
   private setCanonical(url: string): void {
-    let link = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    let link = this.document.querySelector<HTMLLinkElement>(
+      'link[rel="canonical"]',
+    );
     if (!link) {
       link = this.document.createElement('link');
       link.setAttribute('rel', 'canonical');
